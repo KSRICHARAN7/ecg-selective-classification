@@ -1,0 +1,48 @@
+[
+  {
+    "title": "PTB-XL official resource",
+    "url": "https://physionet.org/content/ptb-xl/1.0.3/"
+  },
+  {
+    "title": "PTB-XL descriptor",
+    "url": "https://doi.org/10.1038/s41597-020-0495-6"
+  },
+  {
+    "title": "PTB-XL benchmarks",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32903191/"
+  },
+  {
+    "title": "Noise and AF classification",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37203548/"
+  },
+  {
+    "title": "Bayesian classification with rejection",
+    "url": "https://arxiv.org/abs/2203.00512"
+  },
+  {
+    "title": "Lightweight anomaly filters",
+    "url": "https://arxiv.org/html/2510.26501v2"
+  },
+  {
+    "title": "Wearable ECG quality uncertainty preprint",
+    "url": "https://www.medrxiv.org/content/10.64898/2026.08.25.26361304v1"
+  },
+  {
+    "title": "Signal quality indices",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22902749/"
+  },
+  {
+    "title": "AF compressed ECG",
+    "url": "https://www.frontiersin.org/journals/electronics/articles/10.3389/felec.2022.906689/full"
+  },
+  {
+    "title": "MIT-BIH noise stress test",
+    "url": "https://physionet.org/content/nstdb/1.0.0/"
+  },
+  {
+    "title": "Saglam et al Selective classification under imbalance 2026",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42486266/",
+    "review_depth": "abstract",
+    "role": "motivation for class-aware evaluation; not claimed as a novel metric"
+  }
+]

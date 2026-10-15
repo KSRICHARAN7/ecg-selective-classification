@@ -1,0 +1,74 @@
+{
+  "raw_confidence": {
+    "threshold": 0.061920784413814545,
+    "retain_when": "score <= threshold",
+    "target_weighted_coverage": 0.9,
+    "actual_weighted_coverage": 0.9000876773473618,
+    "actual_unweighted_coverage": 0.8943620808757107,
+    "coverage_by_condition": {
+      "bw_0": 0.8904830224772836,
+      "bw_12": 0.9182209469153515,
+      "bw_24": 0.9186991869918699,
+      "bw_6": 0.9139167862266858,
+      "clean": 0.9172644667623147,
+      "ma_0": 0.8024868483978957,
+      "ma_12": 0.8971783835485414,
+      "ma_24": 0.9167862266857962,
+      "ma_6": 0.8742228598756576
+    }
+  },
+  "confidence_adjusted": {
+    "threshold": 0.042768451096039065,
+    "retain_when": "score <= threshold",
+    "target_weighted_coverage": 0.9,
+    "actual_weighted_coverage": 0.9000079706679419,
+    "actual_unweighted_coverage": 0.8993570327860141,
+    "coverage_by_condition": {
+      "bw_0": 0.8919177427068389,
+      "bw_12": 0.9019607843137255,
+      "bw_24": 0.9029172644667623,
+      "bw_6": 0.9005260640841702,
+      "clean": 0.9019607843137255,
+      "ma_0": 0.8890483022477284,
+      "ma_12": 0.9029172644667623,
+      "ma_24": 0.9014825442372071,
+      "ma_6": 0.9014825442372071
+    }
+  },
+  "quality_only": {
+    "threshold": 0.039355590774783886,
+    "retain_when": "score <= threshold",
+    "target_weighted_coverage": 0.9,
+    "actual_weighted_coverage": 0.9000079706679419,
+    "actual_unweighted_coverage": 0.8928210850735958,
+    "coverage_by_condition": {
+      "bw_0": 0.8565279770444764,
+      "bw_12": 0.9033955045432808,
+      "bw_24": 0.907221425155428,
+      "bw_6": 0.8938307030129125,
+      "clean": 0.9215686274509803,
+      "ma_0": 0.825920612147298,
+      "ma_12": 0.9076996652319465,
+      "ma_24": 0.9096126255380201,
+      "ma_6": 0.9096126255380201
+    }
+  },
+  "combined": {
+    "threshold": 0.04476286838063845,
+    "retain_when": "score <= threshold",
+    "target_weighted_coverage": 0.9,
+    "actual_weighted_coverage": 0.900007970667942,
+    "actual_unweighted_coverage": 0.8977628991976194,
+    "coverage_by_condition": {
+      "bw_0": 0.8938307030129125,
+      "bw_12": 0.9033955045432808,
+      "bw_24": 0.9029172644667623,
+      "bw_6": 0.9014825442372071,
+      "clean": 0.9067431850789096,
+      "ma_0": 0.8660927785748446,
+      "ma_12": 0.9024390243902439,
+      "ma_24": 0.9019607843137255,
+      "ma_6": 0.9010043041606887
+    }
+  }
+}

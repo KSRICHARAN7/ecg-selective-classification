@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+reproduced/
+data-local/
+research/data/
+*.pending.npz
+research/outputs/**/*.png

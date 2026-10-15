@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-10-15T17:40:36.321312+00:00",
+  "prior_draft": "config/analysis_protocol_draft_v03.json",
+  "changes": "Consolidate Step8 prospective clarifications; specify bootstrap duplicate handling, calibration bins, latency plan and scope/precision gate resolutions before test access",
+  "no_method_or_threshold_refit": true,
+  "final_test_access_before_lock": false,
+  "public_preregistration": false,
+  "gate_resolution": [
+    {
+      "gate": "literature and contribution",
+      "status": "resolved_with_scope_limit",
+      "evidence": "Two close full-text methods checked earlier; Zhang2022 methods and rejection evaluation now inspected at https://arxiv.org/pdf/2203.00512. Uses CPSC2018, 12lead BayesianCNN, MC dropout uncertainty and threshold rejection. This project benchmarks fixed simple error rankers and class retention under withheld source; no assertion of unique or novel design. Bender remains abstract-level; exhaustive novelty audit not claimed."
+    },
+    {
+      "gate": "development waveform and noise integrity",
+      "status": "passed",
+      "evidence": "Steps4,6,7,8 integrity checks; full roles verified, no cross-role exact waveform overlaps; em and final regions not yet acquired or decoded."
+    },
+    {
+      "gate": "compute and technical specification",
+      "status": "passed",
+      "evidence": "Baseline and ranker runs complete; exact resampling, exclusions, deterministic assignment and missingness handling tested."
+    },
+    {
+      "gate": "validation role and precision audit",
+      "status": "resolved_with_precision_limit",
+      "evidence": "Fold9 used only for unlabeled thresholds and coverage; All2091 records contributed scores only. Fold8 gate79 distinct error participants passes feasibility, not power. Existing checkpoint90 AFIB records; 10percent error with90 independent positives gives~3.16percentage-point binomial SE before clustering/deferral. Validation-outcome labels remain unused; no precise primary-CI width or adequate power assumed. Planned2000 paired participant bootstraps will report actual uncertainty and undefined replicates. This gate documents the precision limitation rather than obtaining outcome-based threshold selection."
+    },
+    {
+      "gate": "ethics and permitted scope",
+      "status": "public_secondary_data_scope_recorded",
+      "evidence": "Public licensed deidentified retrospective datasets only; no recruitment, contact, record linkage, deployment or clinical care. No institutional affiliation, ethics determination or approval is asserted. Institution/competition-specific determinations remain to be obtained if required for later submission; this run is an independent computational benchmark, not authorization for such submission."
+    },
+    {
+      "gate": "methods locked and final test reserved",
+      "status": "passed",
+      "evidence": "All original Step8 method-lock hashes verified before consolidation; fixed classifiers, rankers, score thresholds and specifications unchanged. Test manifest targets remain blank and no final-test acquisition run before lock."
+    }
+  ]
+}

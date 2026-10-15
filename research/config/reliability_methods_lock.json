@@ -1,0 +1,21 @@
+{
+  "status": "methods_and_policies_locked_not_full_protocol",
+  "files": {
+    "models/cnn_seed20261015.pt": "6ba28e2c41e24a4e29c9144c4b25cb3b52345f1f1cbf3cce7cf7bcfacf532aea",
+    "config/step8_specification.json": "0e226619b671a5fb7acbeeb150564bd1e415d06adbc6818ce441380ef324326a",
+    "outputs/reliability_development/policy_thresholds.json": "0f5b4dd454258881544802987eaf3c5619be5d6fe398534c6cc3b7dc43343850",
+    "models/reliability/combined.json": "06172b8d20a369f163e9905e7f576a23ed55c240a859a9a864e27d7d31e4ccc0",
+    "models/reliability/confidence_adjusted.json": "c5cad8aaa1fa58b3dd664c9183587df06cacd135858b0b6b9be34f1f1a60ede7",
+    "models/reliability/quality_only.json": "e23f6a2b5e7584fb37d4a79dacfeb55262018ad270c3b1fe5ea1af46b9ba7443",
+    "config/analysis_protocol.json": "5550e520145b6387eb37d4bc116c7af6013edc061b67faaa6442e3ffcb2718f2",
+    "config/protocol_amendments/step8_clarifications.json": "1d1e1e149555a9b587fe137ec084b4676b7c53f3394c3d7e63ccbef5b05d10ae",
+    "scripts/reliability_methods.py": "2554db69b4f1c1c3e5e5fc2c6b4b65564e2402e030ef445ccfe1b70a3c1c0bc1",
+    "scripts/run_reliability_development.py": "a96036c76f7150f13e5b9d87f8003f4509fe5d588c8a2cd4f938c837b06acbfb",
+    "scripts/fault_library.py": "0270e1b283f87e82cf45386b15b2948d446fb67939a67e3bf9640feebebaeab2",
+    "scripts/signal_tools.py": "d82d5e40b0bfe04b79c491907cb60f8d7a5dc58717136aa70615bcb867a83cdb",
+    "outputs/partitions/ranker.csv": "3b3c020c1a059206881a4a4395c93d59a3e2a491e5f57d0bb1910968a6c5d438",
+    "outputs/partitions/validation.csv": "6b5bc2c20e825194f319e0a997b3b628ebffcf9960cd5f00c0f414d56d9fc7a6"
+  },
+  "final_test_used": false,
+  "full_protocol_frozen": false
+}

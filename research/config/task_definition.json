@@ -1,0 +1,41 @@
+{
+  "package_version": "0.13",
+  "stage": "Step12 internal evidence audit and scientific snapshot freeze complete",
+  "dataset": "PTB-XL",
+  "dataset_version": "1.0.3",
+  "clinical_task": "AFIB annotation versus other annotated rhythms",
+  "positive_rule": "AFIB key present in scp_codes irrespective of numeric likelihood",
+  "negative_rule": "At least one dictionary-defined rhythm statement and no AFIB key",
+  "primary_eligibility": [
+    "age available and >= 18",
+    "validated_by_human == True",
+    "at least one rhythm statement"
+  ],
+  "mixed_annotation_rule": "Retain and flag coannotated rhythm statements; exclusion sensitivity to be prespecified",
+  "development_folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "validation_fold": 9,
+  "test_fold": 10,
+  "prohibited_predictor_fields": [
+    "scp_codes",
+    "report",
+    "validated_by",
+    "validated_by_human",
+    "strat_fold",
+    "patient_id",
+    "ecg_id",
+    "noise_annotations"
+  ],
+  "source_sha256": {
+    "ptbxl_database.csv": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+    "scp_statements.csv": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f"
+  }
+}

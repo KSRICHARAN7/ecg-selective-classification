@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-15T17:45:14.911053+00:00",
+  "type": "implementation_correction_after_initial_lock",
+  "stopped_at": "bw24 numerical verification, after clean predictions; no primary em predictions or comparison generated",
+  "cause": "add_noise converts input to float64, but measured-SNR clean reference subtracted the mean of float32 input. Audit used inconsistent precision and triggered1e-10dB tolerance.",
+  "correction": "Convert clean reference to float64 before mean removal, matching the existing generator. No generated signal, model, feature, threshold, assignment, coverage, inference or hypothesis change.",
+  "initial_script_archived": "config/protocol_amendments/run_final_experiment_initial.py.txt",
+  "initial_script_sha256": "d772a54d9e6d6b9a6a3481213cc53667bba6c23c8a527f8eb1e482ff37ed91a0",
+  "corrected_script_sha256": "efefe83b07367a0fedb7e1f19632355a6d41001eddce3bfa5929be1a40b9d649",
+  "first_clean_output_preserved": "outputs/final_experiment_interrupted/clean.npz",
+  "em_source_decoded_by_initial_constructor_after_initial_lock": true,
+  "primary_em_predictions_before_correction": false,
+  "initial_protocol_freeze_unchanged": true
+}

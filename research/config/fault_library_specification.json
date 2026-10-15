@@ -1,0 +1,57 @@
+{
+  "stage": "Step7 development fault library",
+  "recorded_utc": "2026-10-15T17:03:37.074860+00:00",
+  "scope": "numerical verification using train folds1-6 only; no clinical prediction or learned ranking",
+  "protocol_status": "draft_not_frozen",
+  "protocol_sha256": "5550e520145b6387eb37d4bc116c7af6013edc061b67faaa6442e3ffcb2718f2",
+  "training_array_sha256": "72176337b6196a89db4ca47018c9810270add958e6af28159f182f398c18e4a1",
+  "families": [
+    "bw",
+    "ma"
+  ],
+  "reserved_source": "em; not requested or decoded",
+  "source_decoding_seconds": [
+    0,
+    580
+  ],
+  "SNR_dB": [
+    24,
+    12,
+    6,
+    0
+  ],
+  "assignment": "SHA256 UTF8(seed|ecg_id|family); first8bytes big-endian modulo2 channel; next8bytes modulo58 slot; slot10-second bins; same segment all severities",
+  "seed": 20261015,
+  "role_source_regions": {
+    "train_checkpoint_ranker": [
+      0,
+      580
+    ],
+    "validation": [
+      600,
+      1180
+    ],
+    "test": [
+      1200,
+      1780
+    ]
+  },
+  "resampling": "Extract each3600-sample source window at360Hz, then scipy resample_poly up5 down18 Kaiser beta5 constant padding, then mean-center and RMS-scale; output1000 samples100Hz",
+  "edge_assumption": "Finite source-window constant padding may affect boundaries; no assertion that injected noise exactly reproduces real acquisition faults",
+  "noise_gain": "Provider noise headers do not specify a calibrated gain; WFDB source amplitude is canceled by per-window RMS normalization, verified for positive linear gain changes",
+  "source_reuse": "Repeated use across ECGs allowed and logged;116channel-window pairs per source, not independent donors",
+  "pair_retention": "Full source assignments and waveform hashes for all66408pairs; actual paired arrays for pre-existing8-record pilot, full regeneration from source available",
+  "excluded_faults": [
+    "physical electrode disconnection",
+    "recorded lead dropout",
+    "50/60Hz power-line simulation on100Hz input"
+  ],
+  "no_classifier_retraining": true,
+  "no_method_selection_on_predictions": true,
+  "code_sha256": {
+    "scripts/fault_library.py": "0270e1b283f87e82cf45386b15b2948d446fb67939a67e3bf9640feebebaeab2",
+    "scripts/verify_fault_library.py": "d4401a351d70f5768457e5c518a04166c776bd962bb4de806c0e43d250d54a0d",
+    "scripts/signal_tools.py": "d82d5e40b0bfe04b79c491907cb60f8d7a5dc58717136aa70615bcb867a83cdb"
+  },
+  "classifier_sha256": "6ba28e2c41e24a4e29c9144c4b25cb3b52345f1f1cbf3cce7cf7bcfacf532aea"
+}

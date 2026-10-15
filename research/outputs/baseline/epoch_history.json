@@ -1,0 +1,98 @@
+[
+  {
+    "epoch": 1,
+    "train_BCE": 0.29346786836854893,
+    "checkpoint_BCE": 0.15557849407196045,
+    "checkpoint_AUROC": 0.9428198653198654
+  },
+  {
+    "epoch": 2,
+    "train_BCE": 0.11235240407879561,
+    "checkpoint_BCE": 0.15453386306762695,
+    "checkpoint_AUROC": 0.983080808080808
+  },
+  {
+    "epoch": 3,
+    "train_BCE": 0.08147455811044593,
+    "checkpoint_BCE": 0.09536289423704147,
+    "checkpoint_AUROC": 0.9862794612794612
+  },
+  {
+    "epoch": 4,
+    "train_BCE": 0.06390742209190568,
+    "checkpoint_BCE": 0.07368883490562439,
+    "checkpoint_AUROC": 0.9880050505050505
+  },
+  {
+    "epoch": 5,
+    "train_BCE": 0.05597862398971953,
+    "checkpoint_BCE": 0.09010522812604904,
+    "checkpoint_AUROC": 0.9812542087542088
+  },
+  {
+    "epoch": 6,
+    "train_BCE": 0.04708590627447221,
+    "checkpoint_BCE": 0.07934799045324326,
+    "checkpoint_AUROC": 0.9898653198653198
+  },
+  {
+    "epoch": 7,
+    "train_BCE": 0.04700488892000507,
+    "checkpoint_BCE": 0.09591086208820343,
+    "checkpoint_AUROC": 0.9878535353535354
+  },
+  {
+    "epoch": 8,
+    "train_BCE": 0.04281360370152658,
+    "checkpoint_BCE": 0.06111747398972511,
+    "checkpoint_AUROC": 0.9898400673400674
+  },
+  {
+    "epoch": 9,
+    "train_BCE": 0.035948968611486186,
+    "checkpoint_BCE": 0.06114915385842323,
+    "checkpoint_AUROC": 0.9897306397306397
+  },
+  {
+    "epoch": 10,
+    "train_BCE": 0.03306721132542589,
+    "checkpoint_BCE": 0.10517218708992004,
+    "checkpoint_AUROC": 0.9886616161616162
+  },
+  {
+    "epoch": 11,
+    "train_BCE": 0.02931377177824889,
+    "checkpoint_BCE": 0.06500735133886337,
+    "checkpoint_AUROC": 0.9850589225589226
+  },
+  {
+    "epoch": 12,
+    "train_BCE": 0.027849206140624114,
+    "checkpoint_BCE": 0.0783701092004776,
+    "checkpoint_AUROC": 0.9878030303030303
+  },
+  {
+    "epoch": 13,
+    "train_BCE": 0.020769751651030594,
+    "checkpoint_BCE": 0.08716358244419098,
+    "checkpoint_AUROC": 0.9677693602693602
+  },
+  {
+    "epoch": 14,
+    "train_BCE": 0.015870875622186333,
+    "checkpoint_BCE": 0.10310741513967514,
+    "checkpoint_AUROC": 0.9817087542087541
+  },
+  {
+    "epoch": 15,
+    "train_BCE": 0.01890335869640489,
+    "checkpoint_BCE": 0.10074024647474289,
+    "checkpoint_AUROC": 0.9846969696969697
+  },
+  {
+    "epoch": 16,
+    "train_BCE": 0.013464187549825665,
+    "checkpoint_BCE": 0.10510507971048355,
+    "checkpoint_AUROC": 0.9818939393939393
+  }
+]

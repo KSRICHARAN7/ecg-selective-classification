@@ -1,0 +1,93 @@
+{
+  "stage": 10,
+  "recorded_utc": "2026-10-15T18:29:35.796339+00:00",
+  "status": "fixed_followup_specification_after_step9",
+  "primary_result_unchanged": true,
+  "interpretation": "Exploratory generalization followup after observing Step9; no new confirmatory primary claim or model selection",
+  "classifier_or_ranker_refit": false,
+  "policy_adjustment": false,
+  "internal": {
+    "new_severities_db": [
+      18,
+      9,
+      3,
+      -6
+    ],
+    "families": [
+      "bw",
+      "ma",
+      "em"
+    ],
+    "records": "all2085 original test ECGs",
+    "noise_region_seconds": [
+      1200,
+      1780
+    ],
+    "assignment": "unchanged SHA seed|ecg_id|family",
+    "scope": "18/9/3 are untrained interpolation levels;-6 outside development range. Same participants and source windows reused; em was withheld in original development but evaluated in Step9 already."
+  },
+  "external": {
+    "dataset": "ecg-arrhythmia",
+    "version": "1.0.0",
+    "source": "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+    "sample_records": 2000,
+    "sample_seed": 20261019,
+    "selection": "Lowest SHA256(seed|provider_relative_header_path) over all45152 headers; before header labels/ages, no replacement for exclusions; resource-bounded sample, not full cohort",
+    "eligibility": "age>=18, explicit rhythm code from fixed11 provider rhythm acronyms,500Hz5000samples12leads containingII",
+    "AFIB_code": "164889003",
+    "atrial_flutter_distinct_code": "164890007",
+    "rhythm_acronyms": [
+      "SB",
+      "SR",
+      "AFIB",
+      "ST",
+      "AF",
+      "SA",
+      "SVT",
+      "AT",
+      "AVNRT",
+      "AVRT",
+      "SAAWR"
+    ],
+    "processing": "physical header gain/baseline conversion to mV; leadII then polyphase1/5Kaiser5constantpadding; original training normalization unchanged",
+    "conditions": [
+      "clean",
+      "em_24",
+      "em_12",
+      "em_6",
+      "em_0"
+    ],
+    "noise_assignment_ID": "external:record_id to separate original ID namespace",
+    "independence": "Separate Chinese hospital source, not PTBXL. Provider describes patient ECGs but no independent patient-linkage key; record bootstrap assumes one ECG per patient. Cross-cohort exact-waveform hash checks do not establish identity separation."
+  },
+  "evaluation": {
+    "methods": [
+      "raw_confidence",
+      "confidence_adjusted",
+      "quality_only",
+      "combined"
+    ],
+    "coverages": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "policies": "original fixed fold9 cutoffs",
+    "summaries": "combined-minus-confidence-adjusted difference; four-level average for internal new em and external em plus external clean separately",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261018,
+    "AF_retention_research_guardrail": 0.8,
+    "uncertainty": "descriptive pointwise intervals, no multiplicity-controlled superiority claim; never retune based on results",
+    "minimum_external_classes": 30,
+    "if_insufficient": "report sparse uncertainty and descriptive results; do not alter sample or enrich labels"
+  },
+  "files": {
+    "config/protocol_lock.json": "a7c006a1446b201f69f7c29486e39028f0c44f37dd8f6d6964c660e75562a08d",
+    "scripts/external_ecg.py": "22beffa23004cc47c575240418700d753e468ab9c9ac6e3447a12d3610ab6e2b",
+    "outputs/final_experiment/primary_result.json": "2078491c04c5e23c728c1090b883bcabfe01bdf2a05ef840678142421053162a"
+  }
+}

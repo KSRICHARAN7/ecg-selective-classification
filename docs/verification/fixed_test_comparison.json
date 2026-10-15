@@ -1,0 +1,19 @@
+{
+  "matched_rows": 140,
+  "fixed_policy_rows": 20,
+  "differences": [],
+  "all_aggregate_cells_match": true,
+  "scope": "fixed primary model/recorded em noise replay; not retraining, external replication, or original cross-role waveform-overlap audit",
+  "recomputed_inference": {
+    "replicates": 2000,
+    "seed": 20261018,
+    "participants": 1812,
+    "undefined_replicates": 0,
+    "percentile95_CI": [
+      -0.02703376153738879,
+      0.011410111964674544
+    ],
+    "scope": "conditional on fixed fitted models and assigned noise library; participant sampling only"
+  },
+  "bootstrap_interval_matches": true
+}

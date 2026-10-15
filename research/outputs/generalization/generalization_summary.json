@@ -1,0 +1,260 @@
+{
+  "recorded_utc": "2026-10-15T18:34:47.358056+00:00",
+  "followup_specification_utc": "2026-10-15T18:29:35.796339+00:00",
+  "scope": "Exploratory fixed-model severity transfer and sampled external validation; original Step9 result unchanged",
+  "internal_test_records": 2085,
+  "external_records": 1864,
+  "external_positive_records": 103,
+  "external_negative_records": 1761,
+  "external_class_count_warning": false,
+  "new_condition_count": 17,
+  "matched_metric_rows": 476,
+  "fixed_policy_rows": 68,
+  "summaries": {
+    "internal_new_em": {
+      "effect_combined_minus_confidence_adjusted": -0.0026687831537113432,
+      "condition_effects": [
+        0.0,
+        0.0,
+        -0.008100761905463216,
+        -0.0025743707093821566
+      ],
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261018,
+        "participants": 1812,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.02411891594761358,
+          0.014466978156288713
+        ],
+        "scope": "conditional on fixed fitted models and assigned noise library; participant sampling only"
+      },
+      "combined_AF_retention": [
+        0.09933774834437085,
+        0.152317880794702,
+        0.2980132450331126,
+        0.8543046357615894
+      ],
+      "AF_retention_guardrail_passed": false,
+      "interpretation": "exploratory transfer summary; not a new confirmatory superiority test"
+    },
+    "external_em": {
+      "effect_combined_minus_confidence_adjusted": 0.0035266906732421416,
+      "condition_effects": [
+        -0.001813056375006894,
+        0.013249745543635894,
+        -0.0015577407277015398,
+        0.004227814252041107
+      ],
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261018,
+        "participants": 1864,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.004515519246821401,
+          0.01654703248244685
+        ],
+        "scope": "conditional on fixed fitted models and assigned noise library; participant sampling only"
+      },
+      "combined_AF_retention": [
+        0.6990291262135923,
+        0.6699029126213593,
+        0.6699029126213593,
+        0.6990291262135923
+      ],
+      "AF_retention_guardrail_passed": false,
+      "interpretation": "exploratory transfer summary; not a new confirmatory superiority test"
+    },
+    "external_clean": {
+      "effect_combined_minus_confidence_adjusted": 0.0039012303617311506,
+      "condition_effects": [
+        0.0039012303617311506
+      ],
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261018,
+        "participants": 1864,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.0055726292474505565,
+          0.020106495236179748
+        ],
+        "scope": "conditional on fixed fitted models and assigned noise library; participant sampling only"
+      },
+      "combined_AF_retention": [
+        0.7184466019417476
+      ],
+      "AF_retention_guardrail_passed": false,
+      "interpretation": "exploratory transfer summary; not a new confirmatory superiority test"
+    }
+  },
+  "max_snr_error_db": 7.105427357601002e-15,
+  "quality_missing": {
+    "internal_bw_18": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_bw_9": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_bw_3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_bw_-6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_ma_18": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_ma_9": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_ma_3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_ma_-6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_em_18": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_em_9": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_em_3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "internal_em_-6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "external_clean": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "external_em_24": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "external_em_12": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "external_em_6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "external_em_0": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "external_dataset": "ecg-arrhythmia1.0.0",
+  "external_sampling": "2000 header paths selected before labels; adult/rhythm eligibility then applied without replacement",
+  "external_patient_linkage_assumption": "one patient ECG per record per provider; no independent linkage key",
+  "unseen": {
+    "severity": "18,9,3,-6 not used to fit methods or policies",
+    "withheld_source": "em excluded from original development but already evaluated in Step9; Step10 is not a fresh source holdout",
+    "external": "new Chinese hospital ECG source not used in classifier/ranker fitting or policy selection",
+    "not_independent": "internal participants and NSTDB noise library reused; external noise uses same library"
+  },
+  "models_or_policies_refitted": false,
+  "elapsed_seconds": 73.48943869700088
+}

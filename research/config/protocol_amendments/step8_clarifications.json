@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-15T17:24:39.572636+00:00",
+  "status": "prospective draft clarification",
+  "changes": {
+    "error_case_gate_clarification": "Require at least30 distinct participants with any incorrect variant and30 with any correct variant; variants never counted as independent cases for this gate",
+    "policy_weight_clarification": "fold9 empirical score CDF: clean total1/3, bw total1/3, ma total1/3; each noise SNR1/12; every original recording total1",
+    "threshold_definition": "smallest empirical score at cumulative weighted mass>=0.9; retain score<=threshold; report achieved coverage and ties"
+  },
+  "reason": "Resolve ambiguous cases and mixture wording before viewing the affected development outputs; preserve patient independence and equal source-family weights",
+  "source_protocol": "config/analysis_protocol.json",
+  "full_protocol_frozen": false
+}

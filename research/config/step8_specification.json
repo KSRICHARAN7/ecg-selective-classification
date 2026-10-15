@@ -1,0 +1,31 @@
+{
+  "stage": "Step8 reliability methods and policy selection",
+  "recorded_utc": "2026-10-15T17:24:39.572636+00:00",
+  "protocol_status": "draft_not_frozen",
+  "classifier_sha256": "6ba28e2c41e24a4e29c9144c4b25cb3b52345f1f1cbf3cce7cf7bcfacf532aea",
+  "classification_threshold": 0.5626154541969299,
+  "ranker_role": "fold8; no classifier-training participant overlap",
+  "ranker_variants": "clean plus bw/ma at24,12,6,0dB:9 per original record",
+  "ranker_fit_weight": "each variant1/9; original recording total1",
+  "learned_methods": [
+    "confidence_adjusted",
+    "quality_only",
+    "combined"
+  ],
+  "quality_missingness": "all7 explicit binary missing flags; fit medians on fold8 only; all-missing column uses0",
+  "preprocessing": "standardize complete feature design using fold8 only; every record contributes9 rows of equal weight",
+  "estimator": "LogisticRegression C1, lbfgs, max_iter2000, tol0.0001, intercept, no class weights; convergence warning stops fit",
+  "error_case_gate_clarification": "Require at least30 distinct participants with any incorrect variant and30 with any correct variant; variants never counted as independent cases for this gate",
+  "policy_weight_clarification": "fold9 empirical score CDF: clean total1/3, bw total1/3, ma total1/3; each noise SNR1/12; every original recording total1",
+  "threshold_definition": "smallest empirical score at cumulative weighted mass>=0.9; retain score<=threshold; report achieved coverage and ties",
+  "validation_reference_labels": "not read/copied/used for fitting, thresholds or performance evaluation",
+  "withheld_em": "not requested or decoded",
+  "final_test": "not acquired or evaluated",
+  "clarification_timing": "Recorded before examining fold8 errors or fold9 policy scores; not a retrospective claim of public preregistration",
+  "code_sha256": {
+    "scripts/reliability_methods.py": "2554db69b4f1c1c3e5e5fc2c6b4b65564e2402e030ef445ccfe1b70a3c1c0bc1",
+    "scripts/run_reliability_development.py": "a96036c76f7150f13e5b9d87f8003f4509fe5d588c8a2cd4f938c837b06acbfb"
+  },
+  "pre_run_integrity_update_utc": "2026-10-15T17:26:51.867091+00:00",
+  "integrity_update_note": "Added atomic output readback and expanded method-lock file hashes before any fitting; scientific settings unchanged"
+}

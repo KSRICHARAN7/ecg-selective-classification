@@ -1,0 +1,180 @@
+{
+  "stage": 11,
+  "recorded_utc": "2026-10-15T18:52:40.796224+00:00",
+  "scope": "Targeted exploratory robustness; no replacement or retuning of original primary test",
+  "seeds": [
+    20261016,
+    20261017
+  ],
+  "seed_method": "Same classifier recipe and folds; independently select fold7 checkpoint/AF cutoff, fit fold8 rankers, select unlabeledfold9 policies; report every seed without selecting best; only original clean+em4 test conditions",
+  "checkpoint_gate": "AUROC>=.8 and specificity>=.5 at90percent checkpoint sensitivity; otherwise report failure without test evaluation",
+  "ranker_gate": "at least30 distinct participants with any wrong and30 with any correct variant",
+  "review_quantile_targets": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "ablation_definitions": {
+    "confidence_no_class": [
+      "confidence_adjusted",
+      [
+        "predicted_AFIB"
+      ]
+    ],
+    "quality_no_class": [
+      "quality_only",
+      [
+        "predicted_AFIB"
+      ]
+    ],
+    "combined_no_class": [
+      "combined",
+      [
+        "predicted_AFIB"
+      ]
+    ],
+    "combined_no_amplitude": [
+      "combined",
+      [
+        "AC_std_mV",
+        "peak_to_peak_mV",
+        "missing_AC_std_mV",
+        "missing_peak_to_peak_mV"
+      ]
+    ],
+    "combined_no_spectral": [
+      "combined",
+      [
+        "low_band_ratio",
+        "high_band_ratio",
+        "missing_low_band_ratio",
+        "missing_high_band_ratio"
+      ]
+    ],
+    "combined_no_temporal": [
+      "combined",
+      [
+        "flat_difference_fraction",
+        "RMSSD_over_std",
+        "missing_flat_difference_fraction",
+        "missing_RMSSD_over_std"
+      ]
+    ],
+    "combined_no_kurtosis": [
+      "combined",
+      [
+        "Pearson_kurtosis",
+        "missing_Pearson_kurtosis"
+      ]
+    ]
+  },
+  "ablation_fit": "fixed original classifier; fold8 only, sampleweights1/9, original LR settings and complete fold8 preprocessing; predict and select policies on unlabeledfold9. Test clean+em4, matched budgets80/90/95. No outcome-based selection",
+  "ablation_contrast": "ablated minus corresponding full model at90percent, mean over four em conditions; pointwise paired2000participant bootstrap",
+  "subgroups": [
+    "age18_64",
+    "age65plus",
+    "recorded_sex0",
+    "recorded_sex1",
+    "native_artifact_annotated",
+    "no_native_artifact_annotation"
+  ],
+  "subgroup_rule": "Numeric descriptive metrics and subgroup intervals only if>=30 positive and>=30 negative distinct participants; otherwise counts and insufficient. No demographic model fitting or fairness guarantee. Age65plus includes provider deidentified oldest age codes. Sex reported as original numeric categories without unverified relabeling.",
+  "native_artifact_fields": [
+    "baseline_drift",
+    "static_noise",
+    "burst_noise",
+    "electrodes_problems"
+  ],
+  "native_rule": "any nonempty annotation, not confirmed leadII-specific noise; absent annotation is not noise-free. Compare original and four injectedem levels within groups, not randomized native-noise effects",
+  "cohort_sensitivities": [
+    "exclude_mixed_rhythms",
+    "one_earliest_per_participant"
+  ],
+  "earliest_rule": "within eligible test cohort, ISO recording_date then lexical ecg_id; dates shifted by participant",
+  "review_status_audit": "metadata-only adult rhythm inclusion/counts across all review statuses and folds; no expansion of model/data training",
+  "positive_case_flagging": "on original13test and external5conditions, original4methods, matched and val-fixed budgets80/90/95: deferred AF, true positives deferred, FN retained, error capture; highconfidence error maxp>=.9 descriptive",
+  "inference": "2000pairedparticipant bootstrap seed20261018; pointwise descriptive intervals, undefined replicates honored, no multiplicity-controlled or new confirmatory superiority claim",
+  "preserved_files": {
+    "outputs/final_experiment/STEP9_RESULTS.md": "37d3b05b39b00346875a2a9027abbc7ed944d3f198727dbc227676bf8411390e",
+    "outputs/final_experiment/audit.json": "c2a88bd4011bf6d7988ebaf14aeb6b52f41202aa20d65e576f83d24d9e189ca2",
+    "outputs/final_experiment/bw_0.npz": "5ebbe2a35399bdd368004a8841603ad8ef13d495a99ca25629a5853ba91e97f8",
+    "outputs/final_experiment/bw_12.npz": "d6b4e4e500752e0e5617de6905fa4cbac9e13f5a17480039e7ea04e74533625f",
+    "outputs/final_experiment/bw_24.npz": "d155a317dd80656600dc1b69e2c8a6996364b90d00277c12216b0d75f70e0da7",
+    "outputs/final_experiment/bw_6.npz": "fb5977287ed0914d62609c0a7d390ef8652ce4949cdc8c80d6ac9c5e4eb9ce6b",
+    "outputs/final_experiment/calibration.png": "77d06efcc7579abd9a5d770607ae8c5d0899e95d8adfc810c88834c2fbf7511d",
+    "outputs/final_experiment/calibration.svg": "9cca2eb340540e31eff0060089ba6c094e52667bc743d42aa3c3e8baf1312c9e",
+    "outputs/final_experiment/classification_metrics.json": "5bfe3506b9111a2df007c4cc04a65e2beca7723b90826a7afd1e5ad8c34899d0",
+    "outputs/final_experiment/clean.npz": "f7c327b40ab6f989080129010304eae69318040d6523c15cb7f48ca0db0532b8",
+    "outputs/final_experiment/compute.json": "a88694a8ee91611775e631a73c601602e501e34aacda14bae6c95a24d9dfb49d",
+    "outputs/final_experiment/em_0.npz": "baa02128e771ff1bb1846b68356f281a49391485e0340896b8c960106abf7928",
+    "outputs/final_experiment/em_12.npz": "4ebbcb5f199764268ae0db3d1a28482a8a2e53b70e9b09156d2635e06830bdb3",
+    "outputs/final_experiment/em_24.npz": "fd8f3607a3fcd314e20fa60f663c39b5edbd922ab857cf484d160f1b1aaf4779",
+    "outputs/final_experiment/em_6.npz": "6b10e80063e6c72ff837c301dca5500303c51728fb4f21baaca931eda1c8f0db",
+    "outputs/final_experiment/fixed_policy_coverage.png": "7f4ea5b5a0e95a1f03875e52418b36975a2722d3b81726b0b50cbf5696f856ae",
+    "outputs/final_experiment/fixed_policy_coverage.svg": "abd102934dd1bbc2701244596fd9d65cd3c5215b1cb0a68fc6a63a734dcf6d8a",
+    "outputs/final_experiment/fixed_policy_metrics.csv": "5460e470ff02219ee5152acffdae30144512798eeced7fce1301968a5ebd71ca",
+    "outputs/final_experiment/ma_0.npz": "1cde8092a57832ffbbed6bfab54b5e609a6c7231a5fb30f2db02536552ce0ecb",
+    "outputs/final_experiment/ma_12.npz": "83245b5655118c9420bfea5664303aa17e814b5fd214a7f4dcd7810e82ae053d",
+    "outputs/final_experiment/ma_24.npz": "e47dfb4ffd0a0bde6d8703c5c71c7c5e3ea44c9b0e8123baa415475e3e9f15b0",
+    "outputs/final_experiment/ma_6.npz": "5bd06900b5085dee0b4c516d1c670129b404c9cfb2a8e8e8759f522757d4f00e",
+    "outputs/final_experiment/matched_coverage_metrics.csv": "547829e0e5e5fabd65dc64a0ebcdbe73b6769900777064287b2d61b8b19f6f43",
+    "outputs/final_experiment/noise_assignments.json": "48776b0d40fe92e840fc446a1d12d71b1f07c9bce85e590461f643d2d61c983c",
+    "outputs/final_experiment/noise_segment_audit.json": "3a99e90d3239d1cd7681fa0a395dae17dfa9ae65e4e319c580e04ec8908e84fb",
+    "outputs/final_experiment/primary_bootstrap.npz": "f87dc9eacb664a47f070eb28057387c865208db27800b8a164a850afd4805cc1",
+    "outputs/final_experiment/primary_bootstrap.png": "f7efe6c63437e5929df1f8881d94c7c07b703167a58996b5f839e9631a07ff97",
+    "outputs/final_experiment/primary_bootstrap.svg": "48eb452776989d5d55d95db55b8857a22f1a4e47b77e55bb2c0f55b0f8d77557",
+    "outputs/final_experiment/primary_error_retention.png": "c6cf5f54a1811cb9fa1753dc373dbaa92d4ad2e6ff9a19db8e76a3f3d6e2ea22",
+    "outputs/final_experiment/primary_error_retention.svg": "228e5002c8da2dc50348be80594b80652f5451ac061790995e4ec9949422b1d2",
+    "outputs/final_experiment/primary_result.json": "2078491c04c5e23c728c1090b883bcabfe01bdf2a05ef840678142421053162a",
+    "outputs/final_experiment/risk_coverage_em.png": "f1121adc863bd56c20f40474bde7e5d57debececb97a7147abe47d928deddd2a",
+    "outputs/final_experiment/risk_coverage_em.svg": "0ef72a3cc9f7a0c4b76cb6530662d86edef55ee285e5d03bce4c59cb1ca3cc53",
+    "outputs/generalization/STEP10_RESULTS.md": "aea640fc0337cab43e9e43769f49b7ac8463a4044ba40f9265a526aa870ab2f3",
+    "outputs/generalization/audit.json": "3f7ba671d8b519ff01606d1853c9932becc13e1a69743d9986e14e2950c785cf",
+    "outputs/generalization/classification_metrics.json": "ace881aaafd032452aeb2f072574ed27d2651be29664e6a0c5a1f6d7e03c4195",
+    "outputs/generalization/external_acquisition.json": "2053b82441ddf0159c3513fe50dc5e3804bdf6593014c2b89fba5e2bfb4d9e70",
+    "outputs/generalization/external_acquisition_summary.json": "3b038106e5cfa5b5f37e6dd8a56701a278f02f41ba89ffb4aa8a4ed5efa4c6d9",
+    "outputs/generalization/external_clean.npz": "d5ef63a931643f6b7bba135538f507c2e2d4b27f35b75a1bc613cc0397e9cba0",
+    "outputs/generalization/external_clean_bootstrap.npz": "9c1232bd03439db80cb7c15e3f78fe75e1b86a2bde3c8b3f3be87fd72e98fadb",
+    "outputs/generalization/external_em_0.npz": "3cf910c9d6970b6ae1b2205704e5f56dcbf0df345d8d78aaf6e2ba07d2533b96",
+    "outputs/generalization/external_em_12.npz": "9887b20cf9b242286a4d60a43420563a9adaa8257b859def55a12e1fccdc7291",
+    "outputs/generalization/external_em_24.npz": "d255d274a5fa4129e303e2508362f54ed2548060cd38747b9634095bac084165",
+    "outputs/generalization/external_em_6.npz": "631110d01c91409ece3914925e07db048e434cd87ddefe285bff218a22d6ee05",
+    "outputs/generalization/external_em_bootstrap.npz": "2aed598b75e388e2d2de5693338dee6b89e796dfbd768104c1fff0101a4d560c",
+    "outputs/generalization/external_error_retention.png": "12b13cf22d4b88833ba1ffcd468e010d5c6ff0fc136fe2d569740a9179b04a04",
+    "outputs/generalization/external_error_retention.svg": "9d805617363c313adbc83dad4472f26e5e7841bfa5018596e49f6baa3e9400c1",
+    "outputs/generalization/external_header_manifest.json": "9cc308e3dacd006e05d7350b8abb8eb2a4ed844b16b5a6b3ae150b2adfb3cd01",
+    "outputs/generalization/external_risk_coverage.png": "23d509f037ac1e972411ed1a51554621298fb1c36c46846c70baff43c8ae8547",
+    "outputs/generalization/external_risk_coverage.svg": "c70c3cb0b36436d5e7b10487df659eda9baf760fb3e7b2f4023d1b535c251b79",
+    "outputs/generalization/external_signal_audit.json": "9c96f17cf8c6000a9a651569ff4c5213efa951acda58f205d1fcdd80ff6e5234",
+    "outputs/generalization/fixed_policy_metrics.csv": "6f1458a6353950daad252d4b7eaf6f84adf0ec143844c3a5996facbcf76f110e",
+    "outputs/generalization/generalization_summary.json": "dcbd4615acb9cb377e6792ad195da91ac78a249e6d31ad24a4574d1b8e2a44c9",
+    "outputs/generalization/internal_bw_-6.npz": "6a5823f4d97b4682398dd31cfc047fba6a04784b9cb136e57a23a8fb24d0f6dc",
+    "outputs/generalization/internal_bw_18.npz": "78925c363d90227fe9e108dbb2df9840a980dbe1d1e91f6c21ec49c407552b6a",
+    "outputs/generalization/internal_bw_3.npz": "d1c3577a94453e5446e46fcf6d72b5ebb0a0a53cadc48f2be595ddfc11e20f59",
+    "outputs/generalization/internal_bw_9.npz": "5613d8e8931056f9dadfd1d7b78534f282009dfc6fc9d4b9b1e90f36af07bf99",
+    "outputs/generalization/internal_em_-6.npz": "6de07fd07cf7ee54156d301af690cd23b1665fc90a42992bc2ee4e9a408b1c28",
+    "outputs/generalization/internal_em_18.npz": "47dba5adc1134671c8d590e4a1f92e3655948e44072076925a1ba80ad1116803",
+    "outputs/generalization/internal_em_3.npz": "dd47cfa0709f5c2292d0e02ab8fbb4e2088201837a92e2d7009b0b2125b719f0",
+    "outputs/generalization/internal_em_9.npz": "92bc555a52a3e888432cf61491ebf31f471827088986be1c98ab7d8fb24e9b78",
+    "outputs/generalization/internal_ma_-6.npz": "80e20694e93def324619b3247010aecbb8acbc88d2c2596ed3a47bf7201a2712",
+    "outputs/generalization/internal_ma_18.npz": "8d774c24ff203daf73318b9d601774a7b94d73ec02f75c0fcfaeb5c0f026310b",
+    "outputs/generalization/internal_ma_3.npz": "4269a32245bf0221fd73d5854deedd0c44c7360f0da8834676e3b68b4cffda12",
+    "outputs/generalization/internal_ma_9.npz": "8b97e77040568357dae22f7c270c6c6042c3c7e1638502e5157ccaa20b018e6d",
+    "outputs/generalization/internal_new_em_bootstrap.npz": "4956bcba030e45a7671d3cdadb5be7523edf13af8f606ecb41b9cf7add8e6b60",
+    "outputs/generalization/matched_coverage_metrics.csv": "87dc8dace1ee9f71bec2688382e703360d03d662ac43dafc619877b600969c94",
+    "outputs/generalization/noise_assignments.json": "ccf56be42a0da751135c75ae0cf53897410ad57885205c02f37af4951055fbc9",
+    "outputs/generalization/severity_transfer.png": "d4e46751026f4cdc58577ee827779b73fbf1c5f4aa513fb8cb78fd9bf5c21f3b",
+    "outputs/generalization/severity_transfer.svg": "6913c12209bf21ff973283e52e4022251af8b80a3b9d8712f700e2bd649e5463",
+    "outputs/generalization/transfer_effect_intervals.png": "13f8a181039f0bf51b659e2706a7c91e0a1f56a93a5aa212c598c1b819434322",
+    "outputs/generalization/transfer_effect_intervals.svg": "206536c605da0beeb88a284b5f9a9f0b55e2f3deb85d041a74f970722ffc3a0a"
+  },
+  "implementation_files": {
+    "scripts/robustness_tools.py": "2e990467f0d7b1e98c94ced2eeb6149c311aac1eec07c33d3928f6ecf974d7a7",
+    "scripts/run_seed_sensitivities.py": "8ea5bdccbcfd5772377688cdf17881a8c4ca89125125f7239a3d96efdc3fff84",
+    "scripts/run_robustness_checks.py": "95a9d8c3ca247398a596541a54a15b3d07b595761eb1a75c257592abd2bb4f2c",
+    "tests/test_robustness.py": "a2d3447fe9e01f386fedb90b58feed0149ecaff0abd93a28c36d6c79aa96bdd0"
+  },
+  "diagnostic_implementation_completed_utc": "2026-10-15T18:54:58.233455+00:00",
+  "diagnostic_tests_passed_before_run": 64,
+  "implementation_note": "Seed script unchanged. Added metadata/flagging helper definitions and their tests, finalized diagnostics and integrity checks after seed training started but before diagnostic runs; all analysis choices unchanged from initial specification."
+}

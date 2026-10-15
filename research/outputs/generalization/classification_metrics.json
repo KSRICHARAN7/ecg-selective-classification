@@ -1,0 +1,1634 @@
+{
+  "internal_bw_18": {
+    "AUROC": 0.9760130669716539,
+    "AUPRC": 0.8341607099596966,
+    "Brier": 0.02127951942384243,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1854,
+        "mean_probability": 0.004266647156327963,
+        "observed_fraction": 0.005393743257820928
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 33,
+        "mean_probability": 0.13599227368831635,
+        "observed_fraction": 0.12121212121212122
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 16,
+        "mean_probability": 0.24368196725845337,
+        "observed_fraction": 0.25
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 16,
+        "mean_probability": 0.3505970537662506,
+        "observed_fraction": 0.25
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 12,
+        "mean_probability": 0.44255173206329346,
+        "observed_fraction": 0.3333333333333333
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 13,
+        "mean_probability": 0.5509548783302307,
+        "observed_fraction": 0.5384615384615384
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 11,
+        "mean_probability": 0.6489055156707764,
+        "observed_fraction": 0.5454545454545454
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 18,
+        "mean_probability": 0.7573593258857727,
+        "observed_fraction": 0.7222222222222222
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 31,
+        "mean_probability": 0.8506335616111755,
+        "observed_fraction": 0.9354838709677419
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 81,
+        "mean_probability": 0.9609313011169434,
+        "observed_fraction": 0.8641975308641975
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 121.0,
+      "FN": 30.0,
+      "TN": 1909.0,
+      "FP": 25.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.10580103686557044,
+      "selective_error": 0.026378896882494004,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.8013245033112583,
+      "retained_specificity": 0.9870734229576008,
+      "retained_true_positive_fraction_of_all_positives": 0.8013245033112583
+    }
+  },
+  "internal_bw_9": {
+    "AUROC": 0.9744310593971937,
+    "AUPRC": 0.831042935046106,
+    "Brier": 0.021453622728586197,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1853,
+        "mean_probability": 0.004717646632343531,
+        "observed_fraction": 0.0059363194819212085
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 29,
+        "mean_probability": 0.13416431844234467,
+        "observed_fraction": 0.10344827586206896
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 21,
+        "mean_probability": 0.2467484027147293,
+        "observed_fraction": 0.23809523809523808
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 14,
+        "mean_probability": 0.3497540056705475,
+        "observed_fraction": 0.07142857142857142
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 16,
+        "mean_probability": 0.4389117956161499,
+        "observed_fraction": 0.4375
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 12,
+        "mean_probability": 0.554133951663971,
+        "observed_fraction": 0.5833333333333334
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 12,
+        "mean_probability": 0.6384357810020447,
+        "observed_fraction": 0.5
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 16,
+        "mean_probability": 0.7384031414985657,
+        "observed_fraction": 0.8125
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 37,
+        "mean_probability": 0.854161262512207,
+        "observed_fraction": 0.918918918918919
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 75,
+        "mean_probability": 0.9590946435928345,
+        "observed_fraction": 0.8533333333333334
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 120.0,
+      "FN": 31.0,
+      "TN": 1909.0,
+      "FP": 25.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.10911229514371613,
+      "selective_error": 0.02685851318944844,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.794701986754967,
+      "retained_specificity": 0.9870734229576008,
+      "retained_true_positive_fraction_of_all_positives": 0.7947019867549668
+    }
+  },
+  "internal_bw_3": {
+    "AUROC": 0.9737016922687084,
+    "AUPRC": 0.8264712516271293,
+    "Brier": 0.022164229303598404,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1839,
+        "mean_probability": 0.005497967358678579,
+        "observed_fraction": 0.0065252854812398045
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 42,
+        "mean_probability": 0.14033734798431396,
+        "observed_fraction": 0.023809523809523808
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 23,
+        "mean_probability": 0.2383640706539154,
+        "observed_fraction": 0.17391304347826086
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 15,
+        "mean_probability": 0.3567143678665161,
+        "observed_fraction": 0.4
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 18,
+        "mean_probability": 0.453344464302063,
+        "observed_fraction": 0.4444444444444444
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 11,
+        "mean_probability": 0.554570734500885,
+        "observed_fraction": 0.6363636363636364
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 13,
+        "mean_probability": 0.6559611558914185,
+        "observed_fraction": 0.46153846153846156
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 20,
+        "mean_probability": 0.7473037838935852,
+        "observed_fraction": 0.8
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 40,
+        "mean_probability": 0.8607317209243774,
+        "observed_fraction": 0.875
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 64,
+        "mean_probability": 0.9576197862625122,
+        "observed_fraction": 0.875
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 115.0,
+      "FN": 36.0,
+      "TN": 1908.0,
+      "FP": 26.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.1259271180752926,
+      "selective_error": 0.02973621103117506,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.7615894039735099,
+      "retained_specificity": 0.9865563598759048,
+      "retained_true_positive_fraction_of_all_positives": 0.7615894039735099
+    }
+  },
+  "internal_bw_-6": {
+    "AUROC": 0.9668908414773623,
+    "AUPRC": 0.7641856944725786,
+    "Brier": 0.03093600831925869,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1710,
+        "mean_probability": 0.013454294763505459,
+        "observed_fraction": 0.005847953216374269
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 93,
+        "mean_probability": 0.14590252935886383,
+        "observed_fraction": 0.03225806451612903
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 47,
+        "mean_probability": 0.2427494376897812,
+        "observed_fraction": 0.1276595744680851
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 39,
+        "mean_probability": 0.34750574827194214,
+        "observed_fraction": 0.15384615384615385
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 28,
+        "mean_probability": 0.44411808252334595,
+        "observed_fraction": 0.32142857142857145
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 36,
+        "mean_probability": 0.5543155074119568,
+        "observed_fraction": 0.4444444444444444
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 25,
+        "mean_probability": 0.6534543037414551,
+        "observed_fraction": 0.6
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 21,
+        "mean_probability": 0.7456990480422974,
+        "observed_fraction": 0.6190476190476191
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 46,
+        "mean_probability": 0.8584787249565125,
+        "observed_fraction": 0.8478260869565217
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 40,
+        "mean_probability": 0.9427499771118164,
+        "observed_fraction": 0.85
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 109.0,
+      "FN": 42.0,
+      "TN": 1895.0,
+      "FP": 39.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.14915557777519056,
+      "selective_error": 0.03884892086330935,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.7218543046357616,
+      "retained_specificity": 0.9798345398138573,
+      "retained_true_positive_fraction_of_all_positives": 0.7218543046357616
+    }
+  },
+  "internal_ma_18": {
+    "AUROC": 0.9762082497243473,
+    "AUPRC": 0.8277339172489968,
+    "Brier": 0.021575039252638817,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1859,
+        "mean_probability": 0.004825748037546873,
+        "observed_fraction": 0.0053792361484669175
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 31,
+        "mean_probability": 0.14189080893993378,
+        "observed_fraction": 0.16129032258064516
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 20,
+        "mean_probability": 0.2508346140384674,
+        "observed_fraction": 0.3
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 16,
+        "mean_probability": 0.3556951582431793,
+        "observed_fraction": 0.3125
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 14,
+        "mean_probability": 0.443541020154953,
+        "observed_fraction": 0.35714285714285715
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 8,
+        "mean_probability": 0.5349457859992981,
+        "observed_fraction": 0.5
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 13,
+        "mean_probability": 0.6552550792694092,
+        "observed_fraction": 0.6153846153846154
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 21,
+        "mean_probability": 0.7564924955368042,
+        "observed_fraction": 0.8095238095238095
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 27,
+        "mean_probability": 0.8591021299362183,
+        "observed_fraction": 0.8888888888888888
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 76,
+        "mean_probability": 0.9587440490722656,
+        "observed_fraction": 0.881578947368421
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 116.0,
+      "FN": 35.0,
+      "TN": 1911.0,
+      "FP": 23.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.12184026517460295,
+      "selective_error": 0.027817745803357313,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.7682119205298014,
+      "retained_specificity": 0.9881075491209927,
+      "retained_true_positive_fraction_of_all_positives": 0.7682119205298014
+    }
+  },
+  "internal_ma_9": {
+    "AUROC": 0.9717943801064259,
+    "AUPRC": 0.8036770905627071,
+    "Brier": 0.024342801421880722,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1859,
+        "mean_probability": 0.007163659669458866,
+        "observed_fraction": 0.008606777837547068
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 49,
+        "mean_probability": 0.14130716025829315,
+        "observed_fraction": 0.22448979591836735
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 20,
+        "mean_probability": 0.26435449719429016,
+        "observed_fraction": 0.15
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 12,
+        "mean_probability": 0.35396358370780945,
+        "observed_fraction": 0.3333333333333333
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 10,
+        "mean_probability": 0.45606619119644165,
+        "observed_fraction": 0.5
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 19,
+        "mean_probability": 0.553661584854126,
+        "observed_fraction": 0.5789473684210527
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 16,
+        "mean_probability": 0.6511683464050293,
+        "observed_fraction": 0.8125
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 25,
+        "mean_probability": 0.7539010047912598,
+        "observed_fraction": 0.88
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 20,
+        "mean_probability": 0.8549422025680542,
+        "observed_fraction": 0.95
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 55,
+        "mean_probability": 0.9538057446479797,
+        "observed_fraction": 0.8545454545454545
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 105.0,
+      "FN": 46.0,
+      "TN": 1916.0,
+      "FP": 18.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.1569714485299657,
+      "selective_error": 0.030695443645083934,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.695364238410596,
+      "retained_specificity": 0.9906928645294726,
+      "retained_true_positive_fraction_of_all_positives": 0.695364238410596
+    }
+  },
+  "internal_ma_3": {
+    "AUROC": 0.9632885211995864,
+    "AUPRC": 0.7579909175329836,
+    "Brier": 0.029997223988175392,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1844,
+        "mean_probability": 0.012969749048352242,
+        "observed_fraction": 0.0113882863340564
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 77,
+        "mean_probability": 0.13800977170467377,
+        "observed_fraction": 0.18181818181818182
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 21,
+        "mean_probability": 0.24218852818012238,
+        "observed_fraction": 0.19047619047619047
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 18,
+        "mean_probability": 0.3542005121707916,
+        "observed_fraction": 0.7777777777777778
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 15,
+        "mean_probability": 0.4512079060077667,
+        "observed_fraction": 0.4666666666666667
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 25,
+        "mean_probability": 0.5548826456069946,
+        "observed_fraction": 0.72
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 16,
+        "mean_probability": 0.647342324256897,
+        "observed_fraction": 0.9375
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 11,
+        "mean_probability": 0.7526260018348694,
+        "observed_fraction": 0.8181818181818182
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 25,
+        "mean_probability": 0.8569766283035278,
+        "observed_fraction": 0.84
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 33,
+        "mean_probability": 0.9478544592857361,
+        "observed_fraction": 0.8484848484848485
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 82.0,
+      "FN": 69.0,
+      "TN": 1918.0,
+      "FP": 16.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.23261332584562072,
+      "selective_error": 0.0407673860911271,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.543046357615894,
+      "retained_specificity": 0.9917269906928645,
+      "retained_true_positive_fraction_of_all_positives": 0.543046357615894
+    }
+  },
+  "internal_ma_-6": {
+    "AUROC": 0.8733983029373291,
+    "AUPRC": 0.4440100028219001,
+    "Brier": 0.053358059376478195,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1491,
+        "mean_probability": 0.03384578600525856,
+        "observed_fraction": 0.017437961099932932
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 280,
+        "mean_probability": 0.14423330128192902,
+        "observed_fraction": 0.1
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 105,
+        "mean_probability": 0.24624715745449066,
+        "observed_fraction": 0.1619047619047619
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 81,
+        "mean_probability": 0.34144243597984314,
+        "observed_fraction": 0.18518518518518517
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 49,
+        "mean_probability": 0.44705304503440857,
+        "observed_fraction": 0.2857142857142857
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 24,
+        "mean_probability": 0.5466883778572083,
+        "observed_fraction": 0.6666666666666666
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 21,
+        "mean_probability": 0.651203453540802,
+        "observed_fraction": 0.6666666666666666
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 20,
+        "mean_probability": 0.7544873952865601,
+        "observed_fraction": 0.55
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 9,
+        "mean_probability": 0.8420798778533936,
+        "observed_fraction": 0.6666666666666666
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 5,
+        "mean_probability": 0.9339548349380493,
+        "observed_fraction": 0.8
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 41.0,
+      "FN": 110.0,
+      "TN": 1912.0,
+      "FP": 22.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.3699261044946821,
+      "selective_error": 0.06330935251798561,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.2715231788079471,
+      "retained_specificity": 0.9886246122026887,
+      "retained_true_positive_fraction_of_all_positives": 0.271523178807947
+    }
+  },
+  "internal_em_18": {
+    "AUROC": 0.9749241526671552,
+    "AUPRC": 0.8273588405483533,
+    "Brier": 0.02165473997592926,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1857,
+        "mean_probability": 0.005473422817885876,
+        "observed_fraction": 0.007000538502961767
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 30,
+        "mean_probability": 0.13839678466320038,
+        "observed_fraction": 0.1
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 18,
+        "mean_probability": 0.2468343824148178,
+        "observed_fraction": 0.1111111111111111
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 16,
+        "mean_probability": 0.3509868085384369,
+        "observed_fraction": 0.4375
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 14,
+        "mean_probability": 0.44840294122695923,
+        "observed_fraction": 0.2857142857142857
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 8,
+        "mean_probability": 0.5410017967224121,
+        "observed_fraction": 0.375
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 15,
+        "mean_probability": 0.6723124384880066,
+        "observed_fraction": 0.5333333333333333
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 25,
+        "mean_probability": 0.7562705874443054,
+        "observed_fraction": 0.84
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 26,
+        "mean_probability": 0.8579540848731995,
+        "observed_fraction": 0.9230769230769231
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 76,
+        "mean_probability": 0.9586369395256042,
+        "observed_fraction": 0.868421052631579
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 120.0,
+      "FN": 31.0,
+      "TN": 1911.0,
+      "FP": 23.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.10859523206202017,
+      "selective_error": 0.025899280575539568,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.794701986754967,
+      "retained_specificity": 0.9881075491209927,
+      "retained_true_positive_fraction_of_all_positives": 0.7947019867549668
+    }
+  },
+  "internal_em_9": {
+    "AUROC": 0.9667401740893184,
+    "AUPRC": 0.7779323093114903,
+    "Brier": 0.026760190725326538,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1816,
+        "mean_probability": 0.008782039396464825,
+        "observed_fraction": 0.007158590308370044
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 60,
+        "mean_probability": 0.14418722689151764,
+        "observed_fraction": 0.16666666666666666
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 25,
+        "mean_probability": 0.2355007380247116,
+        "observed_fraction": 0.16
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 26,
+        "mean_probability": 0.3443436026573181,
+        "observed_fraction": 0.23076923076923078
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 19,
+        "mean_probability": 0.4521755278110504,
+        "observed_fraction": 0.5263157894736842
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 9,
+        "mean_probability": 0.5593287944793701,
+        "observed_fraction": 0.4444444444444444
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 21,
+        "mean_probability": 0.6581700444221497,
+        "observed_fraction": 0.6190476190476191
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 21,
+        "mean_probability": 0.754817545413971,
+        "observed_fraction": 0.6190476190476191
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 32,
+        "mean_probability": 0.8508672714233398,
+        "observed_fraction": 0.9375
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 56,
+        "mean_probability": 0.9538071751594543,
+        "observed_fraction": 0.8571428571428571
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 106.0,
+      "FN": 45.0,
+      "TN": 1907.0,
+      "FP": 27.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.15598697411945187,
+      "selective_error": 0.034532374100719423,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.7019867549668874,
+      "retained_specificity": 0.9860392967942089,
+      "retained_true_positive_fraction_of_all_positives": 0.7019867549668874
+    }
+  },
+  "internal_em_3": {
+    "AUROC": 0.945355677763548,
+    "AUPRC": 0.6744672006031927,
+    "Brier": 0.03610820695757866,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1673,
+        "mean_probability": 0.020425397902727127,
+        "observed_fraction": 0.008965929468021518
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 157,
+        "mean_probability": 0.14314863085746765,
+        "observed_fraction": 0.09554140127388536
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 58,
+        "mean_probability": 0.24262851476669312,
+        "observed_fraction": 0.08620689655172414
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 24,
+        "mean_probability": 0.3473425805568695,
+        "observed_fraction": 0.2916666666666667
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 33,
+        "mean_probability": 0.4422898590564728,
+        "observed_fraction": 0.36363636363636365
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 22,
+        "mean_probability": 0.54660964012146,
+        "observed_fraction": 0.45454545454545453
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 27,
+        "mean_probability": 0.6513817310333252,
+        "observed_fraction": 0.6296296296296297
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 34,
+        "mean_probability": 0.7457612156867981,
+        "observed_fraction": 0.6764705882352942
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 27,
+        "mean_probability": 0.8526718020439148,
+        "observed_fraction": 0.7777777777777778
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 30,
+        "mean_probability": 0.9418050646781921,
+        "observed_fraction": 0.8666666666666667
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 91.0,
+      "FN": 60.0,
+      "TN": 1898.0,
+      "FP": 36.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.20798263215926913,
+      "selective_error": 0.0460431654676259,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.6026490066225165,
+      "retained_specificity": 0.9813857290589452,
+      "retained_true_positive_fraction_of_all_positives": 0.6026490066225165
+    }
+  },
+  "internal_em_-6": {
+    "AUROC": 0.7680954957299494,
+    "AUPRC": 0.2271545292280255,
+    "Brier": 0.10599290579557419,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 663,
+        "mean_probability": 0.04890434443950653,
+        "observed_fraction": 0.01809954751131222
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 450,
+        "mean_probability": 0.14619344472885132,
+        "observed_fraction": 0.035555555555555556
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 337,
+        "mean_probability": 0.24713720381259918,
+        "observed_fraction": 0.06528189910979229
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 223,
+        "mean_probability": 0.3460536003112793,
+        "observed_fraction": 0.10762331838565023
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 141,
+        "mean_probability": 0.44999122619628906,
+        "observed_fraction": 0.0851063829787234
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 123,
+        "mean_probability": 0.5519214272499084,
+        "observed_fraction": 0.15447154471544716
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 70,
+        "mean_probability": 0.6436008214950562,
+        "observed_fraction": 0.2714285714285714
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 51,
+        "mean_probability": 0.7506450414657593,
+        "observed_fraction": 0.35294117647058826
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 24,
+        "mean_probability": 0.8350948691368103,
+        "observed_fraction": 0.375
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 3,
+        "mean_probability": 0.922696590423584,
+        "observed_fraction": 0.0
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 2085.0,
+      "retained": 2085.0,
+      "TP": 55.0,
+      "FN": 96.0,
+      "TN": 1788.0,
+      "FP": 146.0,
+      "positive_retained": 151.0,
+      "negative_retained": 1934.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.35562639966579235,
+      "selective_error": 0.11606714628297363,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.36423841059602646,
+      "retained_specificity": 0.9245087900723888,
+      "retained_true_positive_fraction_of_all_positives": 0.36423841059602646
+    }
+  },
+  "external_clean": {
+    "AUROC": 0.887894675906783,
+    "AUPRC": 0.21140519598288326,
+    "Brier": 0.13974617421627045,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1330,
+        "mean_probability": 0.0046580079942941666,
+        "observed_fraction": 0.0030075187969924814
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 42,
+        "mean_probability": 0.13891679048538208,
+        "observed_fraction": 0.023809523809523808
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 20,
+        "mean_probability": 0.2514914870262146,
+        "observed_fraction": 0.0
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 34,
+        "mean_probability": 0.3484771251678467,
+        "observed_fraction": 0.2647058823529412
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 21,
+        "mean_probability": 0.45553773641586304,
+        "observed_fraction": 0.09523809523809523
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 33,
+        "mean_probability": 0.548317551612854,
+        "observed_fraction": 0.09090909090909091
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 46,
+        "mean_probability": 0.6564472317695618,
+        "observed_fraction": 0.17391304347826086
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 56,
+        "mean_probability": 0.7518392205238342,
+        "observed_fraction": 0.23214285714285715
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 90,
+        "mean_probability": 0.8544482588768005,
+        "observed_fraction": 0.25555555555555554
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 192,
+        "mean_probability": 0.961958646774292,
+        "observed_fraction": 0.20833333333333334
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 1864.0,
+      "retained": 1864.0,
+      "TP": 84.0,
+      "FN": 19.0,
+      "TN": 1450.0,
+      "FP": 311.0,
+      "positive_retained": 103.0,
+      "negative_retained": 1761.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.1805351107876703,
+      "selective_error": 0.17703862660944206,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.8155339805825242,
+      "retained_specificity": 0.8233957978421351,
+      "retained_true_positive_fraction_of_all_positives": 0.8155339805825242
+    }
+  },
+  "external_em_24": {
+    "AUROC": 0.8869960249858034,
+    "AUPRC": 0.20772824746049007,
+    "Brier": 0.13826623558998108,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1334,
+        "mean_probability": 0.005231691990047693,
+        "observed_fraction": 0.0029985007496251873
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 39,
+        "mean_probability": 0.15136003494262695,
+        "observed_fraction": 0.02564102564102564
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 24,
+        "mean_probability": 0.24846112728118896,
+        "observed_fraction": 0.125
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 28,
+        "mean_probability": 0.35271021723747253,
+        "observed_fraction": 0.17857142857142858
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 26,
+        "mean_probability": 0.4389175772666931,
+        "observed_fraction": 0.11538461538461539
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 36,
+        "mean_probability": 0.5486924648284912,
+        "observed_fraction": 0.1111111111111111
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 41,
+        "mean_probability": 0.6472832560539246,
+        "observed_fraction": 0.21951219512195122
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 53,
+        "mean_probability": 0.7457040548324585,
+        "observed_fraction": 0.22641509433962265
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 90,
+        "mean_probability": 0.849959135055542,
+        "observed_fraction": 0.2222222222222222
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 193,
+        "mean_probability": 0.9600459337234497,
+        "observed_fraction": 0.21761658031088082
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 1864.0,
+      "retained": 1864.0,
+      "TP": 84.0,
+      "FN": 19.0,
+      "TN": 1457.0,
+      "FP": 304.0,
+      "positive_retained": 103.0,
+      "negative_retained": 1761.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.17854760368943065,
+      "selective_error": 0.1732832618025751,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.8155339805825242,
+      "retained_specificity": 0.8273708120386144,
+      "retained_true_positive_fraction_of_all_positives": 0.8155339805825242
+    }
+  },
+  "external_em_12": {
+    "AUROC": 0.8815820666765904,
+    "AUPRC": 0.1997397278138311,
+    "Brier": 0.13049252331256866,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1327,
+        "mean_probability": 0.008095094002783298,
+        "observed_fraction": 0.0037678975131876413
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 42,
+        "mean_probability": 0.1554524451494217,
+        "observed_fraction": 0.047619047619047616
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 35,
+        "mean_probability": 0.2427125871181488,
+        "observed_fraction": 0.11428571428571428
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 36,
+        "mean_probability": 0.3514404892921448,
+        "observed_fraction": 0.1111111111111111
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 37,
+        "mean_probability": 0.4429284632205963,
+        "observed_fraction": 0.13513513513513514
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 32,
+        "mean_probability": 0.5518335103988647,
+        "observed_fraction": 0.1875
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 52,
+        "mean_probability": 0.6463221311569214,
+        "observed_fraction": 0.21153846153846154
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 64,
+        "mean_probability": 0.7591652870178223,
+        "observed_fraction": 0.234375
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 81,
+        "mean_probability": 0.8516883254051208,
+        "observed_fraction": 0.20987654320987653
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 158,
+        "mean_probability": 0.9593152403831482,
+        "observed_fraction": 0.21518987341772153
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 1864.0,
+      "retained": 1864.0,
+      "TP": 81.0,
+      "FN": 22.0,
+      "TN": 1474.0,
+      "FP": 287.0,
+      "positive_retained": 103.0,
+      "negative_retained": 1761.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.18828390753267946,
+      "selective_error": 0.1657725321888412,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.7864077669902912,
+      "retained_specificity": 0.8370244179443498,
+      "retained_true_positive_fraction_of_all_positives": 0.7864077669902912
+    }
+  },
+  "external_em_6": {
+    "AUROC": 0.8682346195619214,
+    "AUPRC": 0.18487265150337387,
+    "Brier": 0.1208803579211235,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1283,
+        "mean_probability": 0.01454436406493187,
+        "observed_fraction": 0.005455962587685113
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 78,
+        "mean_probability": 0.14326563477516174,
+        "observed_fraction": 0.02564102564102564
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 59,
+        "mean_probability": 0.2459195852279663,
+        "observed_fraction": 0.11864406779661017
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 36,
+        "mean_probability": 0.355403333902359,
+        "observed_fraction": 0.19444444444444445
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 43,
+        "mean_probability": 0.44928279519081116,
+        "observed_fraction": 0.11627906976744186
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 66,
+        "mean_probability": 0.5456088781356812,
+        "observed_fraction": 0.22727272727272727
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 57,
+        "mean_probability": 0.6541104912757874,
+        "observed_fraction": 0.22807017543859648
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 49,
+        "mean_probability": 0.759454607963562,
+        "observed_fraction": 0.20408163265306123
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 80,
+        "mean_probability": 0.8488767743110657,
+        "observed_fraction": 0.1875
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 113,
+        "mean_probability": 0.9522790908813477,
+        "observed_fraction": 0.19469026548672566
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 1864.0,
+      "retained": 1864.0,
+      "TP": 63.0,
+      "FN": 40.0,
+      "TN": 1506.0,
+      "FP": 255.0,
+      "positive_retained": 103.0,
+      "negative_retained": 1761.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.26657680157456876,
+      "selective_error": 0.1582618025751073,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.6116504854368932,
+      "retained_specificity": 0.8551959114139693,
+      "retained_true_positive_fraction_of_all_positives": 0.6116504854368932
+    }
+  },
+  "external_em_0": {
+    "AUROC": 0.8301053571723922,
+    "AUPRC": 0.156818440255657,
+    "Brier": 0.11389084160327911,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "N": 1061,
+        "mean_probability": 0.02965514361858368,
+        "observed_fraction": 0.00471253534401508
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "N": 210,
+        "mean_probability": 0.1424517184495926,
+        "observed_fraction": 0.02857142857142857
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "N": 120,
+        "mean_probability": 0.24671916663646698,
+        "observed_fraction": 0.11666666666666667
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "N": 106,
+        "mean_probability": 0.3472679853439331,
+        "observed_fraction": 0.16981132075471697
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "N": 68,
+        "mean_probability": 0.45094504952430725,
+        "observed_fraction": 0.1323529411764706
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "N": 54,
+        "mean_probability": 0.5490838289260864,
+        "observed_fraction": 0.14814814814814814
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "N": 62,
+        "mean_probability": 0.6477047801017761,
+        "observed_fraction": 0.20967741935483872
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "N": 57,
+        "mean_probability": 0.7449826002120972,
+        "observed_fraction": 0.15789473684210525
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "N": 69,
+        "mean_probability": 0.8491860628128052,
+        "observed_fraction": 0.2028985507246377
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "N": 57,
+        "mean_probability": 0.9403675198554993,
+        "observed_fraction": 0.12280701754385964
+      }
+    ],
+    "incorrect_confidence_mean": null,
+    "all_record_metrics": {
+      "N": 1864.0,
+      "retained": 1864.0,
+      "TP": 46.0,
+      "FN": 57.0,
+      "TN": 1543.0,
+      "FP": 218.0,
+      "positive_retained": 103.0,
+      "negative_retained": 1761.0,
+      "coverage": 1.0,
+      "balanced_selective_error": 0.3385956787571051,
+      "selective_error": 0.14753218884120173,
+      "positive_retention": 1.0,
+      "negative_retention": 1.0,
+      "retained_sensitivity": 0.44660194174757284,
+      "retained_specificity": 0.8762067007382169,
+      "retained_true_positive_fraction_of_all_positives": 0.44660194174757284
+    }
+  }
+}

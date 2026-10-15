@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-15",
+  "review_scope": "Two close full-text methods sections inspected; no exhaustive novelty claim",
+  "records": [
+    {
+      "source": "https://arxiv.org/html/2510.26501v2",
+      "coverage": "full-text methods and evaluation",
+      "finding": "Prior upstream anomaly filters use PTB-XL, recorded noise and a combined classification/rejection outcome. Our fixed-classifier comparative benchmark should report retained classification errors and class retention separately."
+    },
+    {
+      "source": "https://www.frontiersin.org/journals/electronics/articles/10.3389/felec.2022.906689/full",
+      "coverage": "full-text methods and evaluation",
+      "finding": "Prior compressed-ECG AF work combines quality gates with confidence-triggered reconstruction. Quality plus confidence is established; the present evaluation differs in task, data and matched-budget endpoint."
+    },
+    {
+      "source": "https://arxiv.org/abs/2203.00512",
+      "coverage": "abstract only; PDF/HTML retrieval unsuccessful",
+      "finding": "Uncertainty-based ECG rejection already exists; do not assert absence of a specific experiment without full-text verification."
+    },
+    {
+      "source": "https://arxiv.org/pdf/2203.00512",
+      "coverage": "Retrieved full PDF; methods and rejection evaluation passages checked at Step9 freeze",
+      "finding": "CPSC2018 12lead CNN, MC dropout and threshold rejection, with acceptance/performance tradeoff. Rejection and uncertainty-based review allocation are established. No claim that its design lacks an exact experiment not checked here."
+    }
+  ],
+  "positioning": "independent comparative benchmark under a prespecified withheld added-noise source, not a new clinical detector or new quality metric",
+  "unresolved": "Not exhaustive; Bender and other entries remain abstract-level. First-of-kind claims prohibited. Current contribution wording is a comparative benchmark, not novel algorithm."
+}

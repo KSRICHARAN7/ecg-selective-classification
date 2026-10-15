@@ -1,0 +1,181 @@
+{
+  "protocol_version": "0.3",
+  "status": "draft_not_frozen",
+  "date": "2026-10-15",
+  "primary_question": "Does waveform quality add to confidence for error ranking under withheld added electrode-motion noise?",
+  "reference_task": "AFIB annotation versus other annotated rhythms in human-reviewed adult ECGs",
+  "input": {
+    "lead": "II",
+    "sample_rate_hz": 100,
+    "duration_seconds": 10,
+    "samples": 1000,
+    "provider_source": "records100",
+    "interpretation": "one channel extracted from resting 12-lead recordings"
+  },
+  "roles": {
+    "classifier_training_folds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "checkpoint_and_classification_threshold_fold": 7,
+    "error_ranker_training_fold": 8,
+    "policy_validation_fold": 9,
+    "final_test_fold": 10
+  },
+  "classifier": {
+    "architecture": "Five Conv1d blocks with channels1->16->32->64->64->64; each kernel7 stride2 padding3, BatchNorm and ReLU; global average pool; dropout0.2; linear64->1",
+    "loss": "unweighted binary cross entropy with logits",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 64,
+    "maximum_epochs": 60,
+    "early_stopping_patience": 8,
+    "checkpoint_metric": "minimum fold7 unweighted binary cross entropy",
+    "minimum_improvement": 0.0001,
+    "primary_seed": 20261015,
+    "sensitivity_seeds": [
+      20261016,
+      20261017
+    ],
+    "normalization": "per-record mean removal then division by one global training-only standard deviation; preserve amplitude differences",
+    "classification_threshold": "highest threshold achieving at least 0.90 record-level AFIB sensitivity on clean fold7; ties choose higher specificity",
+    "no_refit": "do not refit classifier using folds7-9 after ranker training",
+    "development_adequacy_gate": "If clean fold7 AUROC<0.80 or specificity<0.50 at the chosen90percent sensitivity operating point, stop and revise prospectively before final evaluation; these are research feasibility criteria"
+  },
+  "quality_features": [
+    "AC standard deviation in mV",
+    "peak-to-peak range in mV",
+    "fraction absolute adjacent differences <= 0.000001 mV",
+    "root mean squared adjacent difference divided by AC standard deviation",
+    "Welch power 0.05-0.5Hz divided by 0.05-40Hz",
+    "Welch power 20-40Hz divided by 0.5-40Hz",
+    "Pearson kurtosis"
+  ],
+  "quality_feature_rules": {
+    "sampling_hz": 100,
+    "welch": "Hann window, nperseg=256, noverlap=128, constant detrend, density scaling, trapezoid frequency integration including boundaries",
+    "small_denominator": "return NaN and add missingness indicator when denominator <= 1e-12",
+    "imputation": "fold8 training medians; all-missing feature replaced by 0; standardization fit on fold8 only"
+  },
+  "rankers": {
+    "raw_confidence": "1 - max(p,1-p), descending means more likely error",
+    "confidence_adjusted_primary_comparator": "logistic error predictor using p, absolute distance from the fixed AFIB classification threshold, and predicted AFIB class",
+    "quality_only": "same logistic error predictor using seven quality features, their missingness flags and predicted AFIB class",
+    "combined_primary": "same logistic error predictor using p, absolute threshold distance, predicted AFIB class, seven quality features and missingness flags",
+    "fit": "L2 logistic regression C=1, intercept, no class weights, fixed settings; error labels from classifier predictions on held-out fold8 only",
+    "sample_weight": "each original recording contributes total weight1 across its 9 clean or corrupted variants",
+    "fallback": "if fold8 contains fewer than30 errors or30 correct cases, do not fit learned rankers; revise protocol before final evaluation"
+  },
+  "faults": {
+    "source": "MIT-BIH Noise Stress Test Database version1.0.0",
+    "development_added_noise": [
+      "bw",
+      "ma"
+    ],
+    "withheld_added_noise": "em",
+    "snr_db": [
+      24,
+      12,
+      6,
+      0
+    ],
+    "primary_snr_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "mixing": "x_corrupt=x_AC + RMS(x_AC)/RMS(noise_AC)*10^(-SNR/20)*noise_AC",
+    "snr_convention": "AC RMS power in analyzed 100Hz signal, not the WFDB QRS-amplitude SNR convention",
+    "resampling": "anti-alias polyphase resample noise from header sampling rate to100Hz before scaling; record exact filter implementation",
+    "noise_segment_windows_seconds": {
+      "ranker_development": [
+        0,
+        580
+      ],
+      "policy_validation": [
+        600,
+        1180
+      ],
+      "final_test": [
+        1200,
+        1780
+      ]
+    },
+    "noise_exposure_rule": "no em waveform use for feature choice, training, pilots, tuning or threshold selection before freeze; pre-existing artifact in resting ECGs is not controlled",
+    "assignment": "deterministic SHA256 of seed, ecg_id, noise family selects channel and nonoverlapping10s window within assigned role; collisions across ECGs permitted and logged; same segment at all four severities",
+    "replicates": "one assigned noise segment per recording and fault family; no claim of independent noise-donor replication",
+    "invalid_source": "log zero-power or nonfinite source; do not silently drop by outcome; amend prospectively if needed",
+    "powerline_and_dropout": "excluded from primary protocol; no 50/60Hz simulation on100Hz data"
+  },
+  "primary_analysis": {
+    "coverage": 0.9,
+    "retained_count": "ceil(coverage*N) within each SNR condition",
+    "tie_rule": "ascending ecg_id lexical ordering, fixed for all methods",
+    "balanced_selective_error": "0.5*(FN_retained/N_positive_retained + FP_retained/N_negative_retained)",
+    "effect": "combined minus confidence-adjusted balanced selective error, averaged equally over four em SNR conditions; negative favors combined",
+    "scope": "offline error-ranking benchmark; per-condition fixed coverage uses experiment grouping but not outcome labels",
+    "af_retention_guardrail": "combined must retain >=80% of AFIB-positive records within every primary SNR condition to support a qualified superiority claim; this is a research criterion, not a clinical standard",
+    "claim_rule": "paired95% CI for primary difference excludes0 in favorable direction and guardrail satisfied; otherwise report inconclusive, no difference, harm, or retention failure as applicable",
+    "undefined": "balanced error is undefined if either retained class is empty; never substitute0 or call this success"
+  },
+  "secondary": [
+    "raw-confidence and quality-only comparisons",
+    "unweighted risk-coverage curves at50,60,70,80,90,95,100percent",
+    "balanced error at same coverages",
+    "positive and negative retention",
+    "retained sensitivity and specificity",
+    "retained true positives divided by all reference positives",
+    "AUROC and AUPRC on all records",
+    "Brier score and reliability diagrams",
+    "confidence of incorrect predictions",
+    "clean and seen-fault conditions",
+    "validation-fixed score thresholds and actual test coverage",
+    "CPU latency and memory with hardware and batch size recorded"
+  ],
+  "policy_threshold": "90th percentile of error scores in fold9 on equal-weight clean,bw,ma and SNR variants; never fit thresholds on em; report actual coverage under shift",
+  "inference": {
+    "bootstrap_replicates": 2000,
+    "seed": 20261018,
+    "unit": "original participant",
+    "paired": true,
+    "preserve": "all participant ECGs and corrupted copies; rerank within each resample",
+    "interval": "percentile2.5,97.5",
+    "scope": "conditional on fitted models and sampled noise library",
+    "undefined_replicates": "report count; no numeric primary interval if >1percent replicates are undefined",
+    "seeds": "primary model analyzed separately; two sensitivity seeds not treated as independent participants"
+  },
+  "sensitivity": [
+    "exclude all mixed-rhythm annotated records",
+    "one earliest recording per participant; timestamp then ecg_id tie break",
+    "all-review-status labels descriptive audit before any model expansion",
+    "each SNR separately",
+    "two additional classifier seeds",
+    "sex and age18-64 versus65plus descriptive strata only when each has at least30 positive and30 negative participants; otherwise mark insufficient"
+  ],
+  "precision": "No adequate power claim. Illustrative80 independent positive participants and10percent retained FN rate yields about3.35percentage-point SE before clustering/deferral. Actual endpoint precision requires validation data and paired errors; do not assume independent corruptions increase sample size.",
+  "freeze_gates": [
+    "closest full-text literature checked and contribution wording settled",
+    "leadII waveform load and header mapping verified on development-only pilot",
+    "noise files and headers downloaded and checksummed; em waveform reserved",
+    "compute and training feasibility measured",
+    "technical exclusions and exact resampling implementation resolved",
+    "validation role and precision audit completed before final test",
+    "institutional or competition ethics requirements checked as applicable",
+    "dated immutable protocol snapshot and amendment log created"
+  ],
+  "external_validation": "not included in this initial protocol; no independent cohort or wearable validation claim",
+  "pilot_rule": "development-only pilot may validate file loading, numerical integrity and runtime; any design change is logged before freeze; no final-test model evaluation before lock",
+  "limitations": [
+    "NSTDB em contains other artifact types as well; holding it out is a withheld source experiment, not proof of generalization to all electrode-motion faults",
+    "One small recorded noise library limits noise-donor generalization; bootstrap intervals condition on assigned noise segments",
+    "Only one fixed CNN architecture is evaluated; generality across model families is unproven",
+    "The proposed 80percent positive-retention guardrail and90percent coverage are research choices without clinical validation",
+    "Band-power features from10s recordings have limited low-frequency resolution; confirm numerical behavior in the pilot"
+  ]
+}

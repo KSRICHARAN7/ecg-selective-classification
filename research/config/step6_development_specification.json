@@ -1,0 +1,35 @@
+{
+  "stage": "Step6 clean baseline development",
+  "recorded_utc": "2026-10-15T13:58:42.521162+00:00",
+  "protocol_status": "draft_not_frozen",
+  "roles": [
+    "train",
+    "checkpoint"
+  ],
+  "no_other_role_use": true,
+  "primary_classifier": "unchanged protocol CNN",
+  "additional_comparators": [
+    "constant negative classifier",
+    "fixed RR-feature logistic regression"
+  ],
+  "RR_features": [
+    "beat_count",
+    "median_RR",
+    "RR_std",
+    "RR_coefficient_of_variation",
+    "RMSSD",
+    "pNN50"
+  ],
+  "RR_extractor": "WFDB4.3.0 xqrs_detect fs100, learnTrue, verboseFalse",
+  "RR_estimator": "training-only median imputation and missing indicators, standard scaling, L2 logistic C1 max_iter2000 random_state20261015",
+  "purpose": "simple clinical-signal reference; not a replacement selected on checkpoint performance",
+  "run_source_sha256": {
+    "scripts/train_baseline.py": "e4ea8f529ae80fd80bf696dd6f668bb5140e40b3c360e159f1d7e754587d4796",
+    "scripts/model_definition.py": "9585b6bb9e1119364e37a9b1a1de162ad6f5e4d40b4bcecf16d2ff8005013168",
+    "config/analysis_protocol.json": "5550e520145b6387eb37d4bc116c7af6013edc061b67faaa6442e3ffcb2718f2",
+    "scripts/fetch_archive_roles.py": "8706e09f86aeacea2eab9856fb87c0a33324dee8dfe7345dc9f2f5b7acbb3145"
+  },
+  "archive_acquisition": "HTTP range blocks from official immutable version ZIP; only requested train/checkpoint members may be decompressed/materialized; CRC and provider SHA256 checks",
+  "pre_fit_source_gate": "Stop without silently excluding records if a selected lead has zero power or identical leadII waveform hashes cross train and checkpoint roles",
+  "recovery_update": "Acquisition code updated after interruption to support offline cache inspection and local official ZIP input; baseline scientific specification unchanged"
+}
