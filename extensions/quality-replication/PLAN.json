@@ -1,0 +1,75 @@
+{
+  "name": "quality-without-predicted-class replication",
+  "locked_utc": "2026-10-15T22:45:26.733877+00:00",
+  "status": "followup_plan_locked_before_new_seed_fitting_and_new_external_header_acquisition",
+  "scope": "Prospectively fixed followup of a posthoc finding; not a replacement primary analysis or independent human replication.",
+  "candidate": "quality_no_class",
+  "primary_reference": "quality_only (quality plus predicted class)",
+  "additional_comparators": [
+    "raw_confidence",
+    "confidence_adjusted",
+    "combined",
+    "unfiltered classifier"
+  ],
+  "fresh_training_seeds": [
+    20261031,
+    20261101
+  ],
+  "original_seed_reference": 20261015,
+  "internal_cohort": "original 2085-record PTB-XL final test set; reused for seed sensitivity, not untouched validation",
+  "development": "same architecture/optimizer/early-stopping recipe; clean folds1-6 train, fold7 checkpoint and AF cutoff, fold8 rankers, unlabeled fold9 policies; no outcome-based model selection",
+  "checkpoint_gate": "AUROC>=0.8 and specificity>=0.5 at 90% checkpoint sensitivity",
+  "ranker_gate": "at least30 participants with wrong variants and30 with correct variants",
+  "conditions": [
+    "clean",
+    "em_24",
+    "em_12",
+    "em_6",
+    "em_0"
+  ],
+  "noise": "unchanged NSTDB em seconds1200-1780 and deterministic assignment; previously used noise library, not a fresh artifact-source validation",
+  "matched_coverages": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "primary_coverage": 0.9,
+  "fixed_policy": "90% weighted score quantile on unlabeled fold9; no external or test retuning",
+  "primary_effect": "Mean over em24/12/6/0 of balanced retained error(candidate) minus balanced retained error(original quality ranker)",
+  "interval": "2000 paired bootstrap resamples, seed20261030; internal by participant, external by record because patient linkage unavailable; same draw across all severities",
+  "AF_retention_requirement": 0.8,
+  "sample_size_gate": "At least30 AF-positive and30 non-AF units (participants internally, records externally) or no numerical comparison interval",
+  "replication_rule": "All two fresh-seed internal comparisons AND all three seed-specific fresh-external comparisons must have negative pointwise95% interval upper bounds and candidate AF retention>=80% at every primary noisy condition. Also report unfiltered/raw-confidence performance; passing this rule is not clinical validation.",
+  "external": {
+    "dataset": "ecg-arrhythmia1.0.0",
+    "sample_seed": 20261029,
+    "sample_headers": 1000,
+    "eligible_header_universe": 43152,
+    "selection": "lowest SHA256(seed|path), excluding all original2000 sampled headers before inspecting new headers; no replacement for ineligibility or failures",
+    "selected_paths_sha256": "4af61670124176ab523cb99d84b40a574ba7f732a9869a4c30639eaa83d6387a",
+    "overlap_original_selected_headers": 0,
+    "eligibility": "unchanged Step10 adult/rhythm/layout rules",
+    "decoder": "unchanged physical leadII and resample_poly1/5 Kaiser5 constant padding",
+    "exact_waveform_overlap": "Stop on exact duplicate within new sample or overlap with previous external sample/PTBXL cohorts; do not silently remove or replace",
+    "patient_linkage": "Provider record identifiers do not establish distinct patients; record bootstrap assumes record independence and may understate uncertainty"
+  },
+  "preserved_inputs_sha256": {
+    "scripts/run_seed_sensitivities.py": "8ea5bdccbcfd5772377688cdf17881a8c4ca89125125f7239a3d96efdc3fff84",
+    "scripts/robustness_tools.py": "2e990467f0d7b1e98c94ced2eeb6149c311aac1eec07c33d3928f6ecf974d7a7",
+    "scripts/reliability_methods.py": "2554db69b4f1c1c3e5e5fc2c6b4b65564e2402e030ef445ccfe1b70a3c1c0bc1",
+    "scripts/signal_tools.py": "d82d5e40b0bfe04b79c491907cb60f8d7a5dc58717136aa70615bcb867a83cdb",
+    "scripts/external_ecg.py": "244952e311d40e253d7e7f0ccc61d1d63e286d2b51fbdbca27c87500b6faa669",
+    "scripts/test_evaluation.py": "7edba33a23a5a472e0ebad362a259087ac89a1af058dc1ac8558f0165bfd770d",
+    "config/analysis_protocol.json": "b967fd1076cc70fa6a958f20a017676f0762184e801e9190960a8fdb12ef102a",
+    "config/step8_specification.json": "0e226619b671a5fb7acbeeb150564bd1e415d06adbc6818ce441380ef324326a",
+    "models/cnn_seed20261015.pt": "6ba28e2c41e24a4e29c9144c4b25cb3b52345f1f1cbf3cce7cf7bcfacf532aea",
+    "outputs/robustness/ablations/quality_no_class.json": "d5276cc58cdf6b40f568b38c3d308059e66511d2270cc3d98342f7e6188fe365"
+  },
+  "excluded_from_public_release": [
+    "source waveforms",
+    "source clinical headers",
+    "per-record predictions",
+    "participant identifiers",
+    "PRIVATE_selection.json"
+  ]
+}
