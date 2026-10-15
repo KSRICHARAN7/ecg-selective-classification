@@ -2,7 +2,7 @@
 
 **Unpublished research by Sricharan Karthigeyan. Not peer reviewed or clinically validated.**
 
-[Explore the project](https://ksricharan7.github.io/portfolio/ecg.html) · [Manuscript](https://ksricharan7.github.io/portfolio/materials/ecg-manuscript-draft.pdf) · [Supplement](https://ksricharan7.github.io/portfolio/materials/ecg-supplement-draft.pdf) · [Reproduce](REPRODUCING.md)
+[One-page visual brief](docs/ecg-research-brief.pdf) · [Explore the project](https://ksricharan7.github.io/portfolio/ecg.html) · [Manuscript](https://ksricharan7.github.io/portfolio/materials/ecg-manuscript-draft.pdf) · [Supplement](https://ksricharan7.github.io/portfolio/materials/ecg-supplement-draft.pdf) · [Reproduce](REPRODUCING.md)
 
 ## The question
 
