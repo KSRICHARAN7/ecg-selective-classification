@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "independently_recomputed_metric_rows": 630,
+  "expanded_bootstrap_checks": 150,
+  "max_recomputed_score_difference": 0.0,
+  "global_rule_independently_recomputed": false,
+  "original_preserved_inputs_unchanged": true,
+  "scope": "internal automated audit using independent scalar count formulas and explicit bootstrap expansion; not independent human review"
+}

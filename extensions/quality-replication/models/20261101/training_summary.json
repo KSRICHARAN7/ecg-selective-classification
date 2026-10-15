@@ -1,0 +1,20 @@
+{
+  "seed": 20261101,
+  "best_epoch": 7,
+  "epochs_run": 15,
+  "training_seconds": 53.00131845999567,
+  "checkpoint": {
+    "AUROC": 0.9866582491582491,
+    "AUPRC": 0.8604633043661278,
+    "Brier": 0.017708919942378998,
+    "threshold": 0.20540183782577515,
+    "sensitivity": 0.9,
+    "specificity": 0.9810606060606061,
+    "balanced_accuracy": 0.940530303030303,
+    "TP": 81,
+    "FN": 9,
+    "TN": 1295,
+    "FP": 25
+  },
+  "checkpoint_gate_passed": true
+}

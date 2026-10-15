@@ -12,3 +12,7 @@ Performed with the Linux/Python 3.12 frozen scientific environment. These are in
 The data-dependent replay used existing locally verified copies of the original provider files; a second network download was not performed. Dependency installation from an empty online environment was not retested. The final isolated source-checkout check and GitHub Actions evidence check are recorded in the repository history/workflow, not represented as a fresh independent scientific replication.
 
 The adapter does not rerun training, the original cross-role waveform-identity audit, the external followup, or exploratory ablations. Its successful result preserves the original negative primary conclusion.
+
+## Quality-without-class replication addendum
+
+The [extension](../extensions/quality-replication/README.md) adds two fresh training seeds and 930 new external records (37 AF-positive). Its internal automated audit independently recomputed all 630 new metric rows, checked 150 explicit bootstrap expansions, and reproduced the failed all-comparisons rule. All 34,791 files in the original scientific freeze were verified unchanged. This is an additional followup, not a change to the original manuscript or primary result.

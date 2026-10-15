@@ -1,0 +1,609 @@
+{
+  "completed_utc": "2026-10-15T22:50:33.515364+00:00",
+  "plan_sha256": "55af957f7fbd7b0d02d46a574da803fecc6ad052cbf3a09cc00d8dbdb842e5db",
+  "external_acquisition": {
+    "sampled_headers": 1000,
+    "eligible_records": 930,
+    "AF_positive_records": 37,
+    "non_AF_records": 893,
+    "exclusion_reasons": {
+      "age_missing_or_under18": 46,
+      "no_explicit_eligible_rhythm_code": 23,
+      "unparseable_provider_date": 1
+    },
+    "all_provider_hashes_verified": true,
+    "exact_waveform_overlap": {
+      "original_external": 0,
+      "train": 0,
+      "checkpoint": 0,
+      "ranker": 0,
+      "validation": 0,
+      "internal_test": 0
+    },
+    "within_sample_duplicate_waveforms": 0,
+    "numerical_class_gate_passed": true,
+    "patient_linkage_unavailable": true,
+    "bootstrap_unit": "record",
+    "selection_sha256": "4af61670124176ab523cb99d84b40a574ba7f732a9869a4c30639eaa83d6387a"
+  },
+  "seed_development_failures": [],
+  "comparisons": [
+    {
+      "cohort": "internal",
+      "seed": 20261015,
+      "N": 2085,
+      "AF_positive_records": 151,
+      "resampling_unit": "participant",
+      "resampling_units": 1812,
+      "class_gate_passed": true,
+      "candidate_minus_quality_with_class_effect": -0.33895917566310907,
+      "CI95": [
+        -0.37302146662225166,
+        -0.30470788263665755
+      ],
+      "candidate_AF_retention": [
+        0.8543046357615894,
+        0.8675496688741722,
+        0.8741721854304636,
+        0.8940397350993378
+      ],
+      "AF_retention_requirement_passed": true,
+      "comparison_requirement_passed": true,
+      "required_for_new_replication_rule": false,
+      "method_summaries": {
+        "raw_confidence": {
+          "mean_balanced_retained_error": 0.130025317548728,
+          "AF_retention": [
+            0.37748344370860926,
+            0.3973509933774834,
+            0.4304635761589404,
+            0.5629139072847682
+          ],
+          "mean_overall_error": 0.015716568993074054
+        },
+        "confidence_adjusted": {
+          "mean_balanced_retained_error": 0.4264022076181408,
+          "AF_retention": [
+            0.09271523178807947,
+            0.10596026490066225,
+            0.19205298013245034,
+            0.4900662251655629
+          ],
+          "mean_overall_error": 0.013985082578582844
+        },
+        "quality_only": {
+          "mean_balanced_retained_error": 0.5,
+          "AF_retention": [
+            0.1986754966887417,
+            0.2251655629139073,
+            0.32450331125827814,
+            0.47019867549668876
+          ],
+          "mean_overall_error": 0.02450719232818327
+        },
+        "combined": {
+          "mean_balanced_retained_error": 0.42376744179179027,
+          "AF_retention": [
+            0.09271523178807947,
+            0.11258278145695365,
+            0.2119205298013245,
+            0.48344370860927155
+          ],
+          "mean_overall_error": 0.014784230154501863
+        },
+        "quality_no_class": {
+          "mean_balanced_retained_error": 0.16104082433689088,
+          "AF_retention": [
+            0.8543046357615894,
+            0.8675496688741722,
+            0.8741721854304636,
+            0.8940397350993378
+          ],
+          "mean_overall_error": 0.03516249334043687
+        },
+        "unfiltered": {
+          "mean_balanced_retained_error": 0.1666317106912209,
+          "AF_retention": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean_overall_error": 0.037290167865707435
+        }
+      },
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261030,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.37302146662225166,
+          -0.30470788263665755
+        ],
+        "scope": "conditional pointwise interval; paired participant resampling; external patient linkage unavailable"
+      }
+    },
+    {
+      "cohort": "fresh_external",
+      "seed": 20261015,
+      "N": 930,
+      "AF_positive_records": 37,
+      "resampling_unit": "record",
+      "resampling_units": 930,
+      "class_gate_passed": true,
+      "candidate_minus_quality_with_class_effect": -0.07909752303897427,
+      "CI95": [
+        -0.14259529779099053,
+        -0.03436226147531018
+      ],
+      "candidate_AF_retention": [
+        0.8648648648648649,
+        0.8648648648648649,
+        0.8108108108108109,
+        0.8378378378378378
+      ],
+      "AF_retention_requirement_passed": true,
+      "comparison_requirement_passed": true,
+      "required_for_new_replication_rule": true,
+      "method_summaries": {
+        "raw_confidence": {
+          "mean_balanced_retained_error": 0.22577977250616738,
+          "AF_retention": [
+            0.6216216216216216,
+            0.5945945945945946,
+            0.6756756756756757,
+            0.6486486486486487
+          ],
+          "mean_overall_error": 0.13201911589008364
+        },
+        "confidence_adjusted": {
+          "mean_balanced_retained_error": 0.24907405728932452,
+          "AF_retention": [
+            0.5945945945945946,
+            0.6216216216216216,
+            0.6486486486486487,
+            0.6756756756756757
+          ],
+          "mean_overall_error": 0.12843488649940263
+        },
+        "quality_only": {
+          "mean_balanced_retained_error": 0.331796180949087,
+          "AF_retention": [
+            0.5945945945945946,
+            0.6486486486486487,
+            0.6216216216216216,
+            0.6756756756756757
+          ],
+          "mean_overall_error": 0.07765830346475508
+        },
+        "combined": {
+          "mean_balanced_retained_error": 0.23579369757030927,
+          "AF_retention": [
+            0.6216216216216216,
+            0.6216216216216216,
+            0.6756756756756757,
+            0.6756756756756757
+          ],
+          "mean_overall_error": 0.12783751493428913
+        },
+        "quality_no_class": {
+          "mean_balanced_retained_error": 0.25269865791011276,
+          "AF_retention": [
+            0.8648648648648649,
+            0.8648648648648649,
+            0.8108108108108109,
+            0.8378378378378378
+          ],
+          "mean_overall_error": 0.1526284348864994
+        },
+        "unfiltered": {
+          "mean_balanced_retained_error": 0.2722526557912896,
+          "AF_retention": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean_overall_error": 0.15591397849462363
+        }
+      },
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261030,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.14259529779099053,
+          -0.03436226147531018
+        ],
+        "scope": "conditional pointwise interval; paired record resampling; external patient linkage unavailable"
+      }
+    },
+    {
+      "cohort": "internal",
+      "seed": 20261031,
+      "N": 2085,
+      "AF_positive_records": 151,
+      "resampling_unit": "participant",
+      "resampling_units": 1812,
+      "class_gate_passed": true,
+      "candidate_minus_quality_with_class_effect": -0.35071861421331135,
+      "CI95": [
+        -0.3786062016545436,
+        -0.31957455720078326
+      ],
+      "candidate_AF_retention": [
+        0.8609271523178808,
+        0.847682119205298,
+        0.847682119205298,
+        0.847682119205298
+      ],
+      "AF_retention_requirement_passed": true,
+      "comparison_requirement_passed": true,
+      "required_for_new_replication_rule": true,
+      "method_summaries": {
+        "raw_confidence": {
+          "mean_balanced_retained_error": 0.24210561645071932,
+          "AF_retention": [
+            0.2913907284768212,
+            0.2980132450331126,
+            0.2913907284768212,
+            0.304635761589404
+          ],
+          "mean_overall_error": 0.013452317527970164
+        },
+        "confidence_adjusted": {
+          "mean_balanced_retained_error": 0.3737499335749326,
+          "AF_retention": [
+            0.09933774834437085,
+            0.17218543046357615,
+            0.2582781456953642,
+            0.31788079470198677
+          ],
+          "mean_overall_error": 0.013052743740010656
+        },
+        "quality_only": {
+          "mean_balanced_retained_error": 0.5,
+          "AF_retention": [
+            0.1456953642384106,
+            0.16556291390728478,
+            0.2980132450331126,
+            0.5165562913907285
+          ],
+          "mean_overall_error": 0.022642514651038892
+        },
+        "combined": {
+          "mean_balanced_retained_error": 0.2807063365415903,
+          "AF_retention": [
+            0.1456953642384106,
+            0.2052980132450331,
+            0.2781456953642384,
+            0.304635761589404
+          ],
+          "mean_overall_error": 0.012120404901438467
+        },
+        "quality_no_class": {
+          "mean_balanced_retained_error": 0.14928138578668868,
+          "AF_retention": [
+            0.8609271523178808,
+            0.847682119205298,
+            0.847682119205298,
+            0.847682119205298
+          ],
+          "mean_overall_error": 0.034096963239211506
+        },
+        "unfiltered": {
+          "mean_balanced_retained_error": 0.16568704328948,
+          "AF_retention": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean_overall_error": 0.03836930455635491
+        }
+      },
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261030,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.3786062016545436,
+          -0.31957455720078326
+        ],
+        "scope": "conditional pointwise interval; paired participant resampling; external patient linkage unavailable"
+      }
+    },
+    {
+      "cohort": "fresh_external",
+      "seed": 20261031,
+      "N": 930,
+      "AF_positive_records": 37,
+      "resampling_unit": "record",
+      "resampling_units": 930,
+      "class_gate_passed": true,
+      "candidate_minus_quality_with_class_effect": -0.03757605692438696,
+      "CI95": [
+        -0.08098990454839566,
+        -0.0031668939576107295
+      ],
+      "candidate_AF_retention": [
+        0.8918918918918919,
+        0.8918918918918919,
+        0.8918918918918919,
+        0.8918918918918919
+      ],
+      "AF_retention_requirement_passed": true,
+      "comparison_requirement_passed": true,
+      "required_for_new_replication_rule": true,
+      "method_summaries": {
+        "raw_confidence": {
+          "mean_balanced_retained_error": 0.23084010585283807,
+          "AF_retention": [
+            0.5675675675675675,
+            0.5675675675675675,
+            0.7027027027027027,
+            0.6756756756756757
+          ],
+          "mean_overall_error": 0.1045400238948626
+        },
+        "confidence_adjusted": {
+          "mean_balanced_retained_error": 0.17118664950785667,
+          "AF_retention": [
+            0.6216216216216216,
+            0.5675675675675675,
+            0.6756756756756757,
+            0.7027027027027027
+          ],
+          "mean_overall_error": 0.13112305854241338
+        },
+        "quality_only": {
+          "mean_balanced_retained_error": 0.25810692530973295,
+          "AF_retention": [
+            0.6756756756756757,
+            0.7027027027027027,
+            0.7567567567567568,
+            0.7837837837837838
+          ],
+          "mean_overall_error": 0.08721624850657109
+        },
+        "combined": {
+          "mean_balanced_retained_error": 0.1630821718396681,
+          "AF_retention": [
+            0.6216216216216216,
+            0.6216216216216216,
+            0.6216216216216216,
+            0.6756756756756757
+          ],
+          "mean_overall_error": 0.13381123058542416
+        },
+        "quality_no_class": {
+          "mean_balanced_retained_error": 0.220530868385346,
+          "AF_retention": [
+            0.8918918918918919,
+            0.8918918918918919,
+            0.8918918918918919,
+            0.8918918918918919
+          ],
+          "mean_overall_error": 0.1654719235364397
+        },
+        "unfiltered": {
+          "mean_balanced_retained_error": 0.2460276626010109,
+          "AF_retention": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean_overall_error": 0.16774193548387095
+        }
+      },
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261030,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.08098990454839566,
+          -0.0031668939576107295
+        ],
+        "scope": "conditional pointwise interval; paired record resampling; external patient linkage unavailable"
+      }
+    },
+    {
+      "cohort": "internal",
+      "seed": 20261101,
+      "N": 2085,
+      "AF_positive_records": 151,
+      "resampling_unit": "participant",
+      "resampling_units": 1812,
+      "class_gate_passed": true,
+      "candidate_minus_quality_with_class_effect": -0.3993642634742567,
+      "CI95": [
+        -0.4235952204112442,
+        -0.36963390996643714
+      ],
+      "candidate_AF_retention": [
+        0.8609271523178808,
+        0.8543046357615894,
+        0.847682119205298,
+        0.8543046357615894
+      ],
+      "AF_retention_requirement_passed": true,
+      "comparison_requirement_passed": true,
+      "required_for_new_replication_rule": true,
+      "method_summaries": {
+        "raw_confidence": {
+          "mean_balanced_retained_error": 0.28538163552624957,
+          "AF_retention": [
+            0.2119205298013245,
+            0.1986754966887417,
+            0.23841059602649006,
+            0.31788079470198677
+          ],
+          "mean_overall_error": 0.013319126265316995
+        },
+        "confidence_adjusted": {
+          "mean_balanced_retained_error": 0.4534965398600789,
+          "AF_retention": [
+            0.09271523178807947,
+            0.09933774834437085,
+            0.1986754966887417,
+            0.3509933774834437
+          ],
+          "mean_overall_error": 0.013319126265316995
+        },
+        "quality_only": {
+          "mean_balanced_retained_error": 0.5,
+          "AF_retention": [
+            0.13245033112582782,
+            0.1456953642384106,
+            0.19205298013245034,
+            0.3443708609271523
+          ],
+          "mean_overall_error": 0.016382525306339903
+        },
+        "combined": {
+          "mean_balanced_retained_error": 0.42699146366977747,
+          "AF_retention": [
+            0.08609271523178808,
+            0.09933774834437085,
+            0.2185430463576159,
+            0.36423841059602646
+          ],
+          "mean_overall_error": 0.013052743740010656
+        },
+        "quality_no_class": {
+          "mean_balanced_retained_error": 0.10063573652574326,
+          "AF_retention": [
+            0.8609271523178808,
+            0.8543046357615894,
+            0.847682119205298,
+            0.8543046357615894
+          ],
+          "mean_overall_error": 0.03356419818859883
+        },
+        "unfiltered": {
+          "mean_balanced_retained_error": 0.12263811747947156,
+          "AF_retention": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean_overall_error": 0.03920863309352518
+        }
+      },
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261030,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.4235952204112442,
+          -0.36963390996643714
+        ],
+        "scope": "conditional pointwise interval; paired participant resampling; external patient linkage unavailable"
+      }
+    },
+    {
+      "cohort": "fresh_external",
+      "seed": 20261101,
+      "N": 930,
+      "AF_positive_records": 37,
+      "resampling_unit": "record",
+      "resampling_units": 930,
+      "class_gate_passed": true,
+      "candidate_minus_quality_with_class_effect": -0.010328838311625635,
+      "CI95": [
+        -0.04434314363180888,
+        0.018683381125327372
+      ],
+      "candidate_AF_retention": [
+        0.8918918918918919,
+        0.8918918918918919,
+        0.8648648648648649,
+        0.8918918918918919
+      ],
+      "AF_retention_requirement_passed": true,
+      "comparison_requirement_passed": false,
+      "required_for_new_replication_rule": true,
+      "method_summaries": {
+        "raw_confidence": {
+          "mean_balanced_retained_error": 0.19808428109832288,
+          "AF_retention": [
+            0.5675675675675675,
+            0.5135135135135135,
+            0.6486486486486487,
+            0.6486486486486487
+          ],
+          "mean_overall_error": 0.12305854241338113
+        },
+        "confidence_adjusted": {
+          "mean_balanced_retained_error": 0.13342162408991667,
+          "AF_retention": [
+            0.6216216216216216,
+            0.5675675675675675,
+            0.5675675675675675,
+            0.7027027027027027
+          ],
+          "mean_overall_error": 0.1442652329749104
+        },
+        "quality_only": {
+          "mean_balanced_retained_error": 0.18025994971185205,
+          "AF_retention": [
+            0.5945945945945946,
+            0.6216216216216216,
+            0.6756756756756757,
+            0.7567567567567568
+          ],
+          "mean_overall_error": 0.12007168458781363
+        },
+        "combined": {
+          "mean_balanced_retained_error": 0.1323828501142334,
+          "AF_retention": [
+            0.6216216216216216,
+            0.6486486486486487,
+            0.5945945945945946,
+            0.7027027027027027
+          ],
+          "mean_overall_error": 0.14456391875746716
+        },
+        "quality_no_class": {
+          "mean_balanced_retained_error": 0.16993111140022643,
+          "AF_retention": [
+            0.8918918918918919,
+            0.8918918918918919,
+            0.8648648648648649,
+            0.8918918918918919
+          ],
+          "mean_overall_error": 0.19324970131421745
+        },
+        "unfiltered": {
+          "mean_balanced_retained_error": 0.18554220513906966,
+          "AF_retention": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean_overall_error": 0.1946236559139785
+        }
+      },
+      "inference": {
+        "replicates": 2000,
+        "seed": 20261030,
+        "undefined_replicates": 0,
+        "percentile95_CI": [
+          -0.04434314363180888,
+          0.018683381125327372
+        ],
+        "scope": "conditional pointwise interval; paired record resampling; external patient linkage unavailable"
+      }
+    }
+  ],
+  "global_replication_requirement_passed": false,
+  "required_comparisons": 5,
+  "completed_required_comparisons": 5,
+  "matched_metric_rows": 480,
+  "fixed_policy_rows": 150,
+  "scope": "locked posthoc-finding followup; internal test participants and recorded noise reused; new external records from previously studied source with no patient-linkage key; original primary remains unchanged",
+  "interpretation": "The favorable original ablation did not meet the full locked replication requirement; report seed-specific error and AF retention without promoting the method."
+}

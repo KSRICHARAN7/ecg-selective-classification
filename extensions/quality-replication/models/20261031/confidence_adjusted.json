@@ -1,0 +1,28 @@
+{
+  "kind": "confidence_adjusted",
+  "classification_threshold": 0.34855958819389343,
+  "feature_names": [
+    "p_AFIB",
+    "distance_from_classification_threshold",
+    "predicted_AFIB"
+  ],
+  "medians": null,
+  "center": [
+    0.054736547178906476,
+    0.3379388054809374,
+    0.058362989323843414
+  ],
+  "scale": [
+    0.17803663411314571,
+    0.0618577906795083,
+    0.23442856225518977
+  ],
+  "coefficient": [
+    1.3541482702541574,
+    -0.6981364910718905,
+    -0.4315858911110642
+  ],
+  "intercept": -4.286447123438432,
+  "fit_iterations": 12,
+  "meaning": "estimated probability that the fixed classifier prediction is incorrect"
+}

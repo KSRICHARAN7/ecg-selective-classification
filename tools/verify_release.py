@@ -27,7 +27,8 @@ def main():
         assert hashlib.sha256(path.read_bytes()).hexdigest() == expected, f'Changed release file: {name}'
     primary = json.loads((ROOT / 'research/outputs/final_experiment/primary_result.json').read_text())
     checked = 0
-    for path in (ROOT / 'research/outputs').rglob('*.csv'):
+    csv_paths = list((ROOT / 'research/outputs').rglob('*.csv')) + list((ROOT / 'extensions/quality-replication').rglob('*.csv'))
+    for path in csv_paths:
         with path.open() as stream:
             rows = list(csv.DictReader(stream))
         if not rows or not {'TP', 'FN', 'TN', 'FP', 'retained', 'N'} <= rows[0].keys():
@@ -58,6 +59,14 @@ def main():
     close(primary['effect_combined_minus_confidence_adjusted'], sum(differences)/4, 'primary effect')
     assert not primary['qualified_superiority_supported']
     assert not primary['AF_retention_guardrail_passed']
+    extension_path = ROOT / 'extensions/quality-replication/RESULTS.json'
+    if extension_path.exists():
+        extension = json.loads(extension_path.read_text())
+        required = [s for s in extension['comparisons'] if s['required_for_new_replication_rule']]
+        assert len(required) == 5
+        decision = all(s['CI95'] is not None and s['CI95'][1] < 0 and min(s['candidate_AF_retention']) >= .8 for s in required)
+        assert decision == extension['global_replication_requirement_passed']
+        assert not decision
     print(json.dumps({'release_files_verified': len(manifest['sha256']), 'aggregate_metric_rows_checked': checked, 'primary_method_condition_cells_checked': 16, 'superiority_supported': False, 'scope': 'saved-evidence integrity and arithmetic; not prediction replication'}, indent=2))
 
 

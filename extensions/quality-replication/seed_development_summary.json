@@ -1,0 +1,76 @@
+[
+  {
+    "seed": 20261031,
+    "best_epoch": 6,
+    "epochs_run": 14,
+    "training_seconds": 52.16063324600691,
+    "checkpoint": {
+      "AUROC": 0.9897222222222222,
+      "AUPRC": 0.8544598404869009,
+      "Brier": 0.018543735146522522,
+      "threshold": 0.34855958819389343,
+      "sensitivity": 0.9,
+      "specificity": 0.9803030303030303,
+      "balanced_accuracy": 0.9401515151515152,
+      "TP": 81,
+      "FN": 9,
+      "TN": 1294,
+      "FP": 26
+    },
+    "checkpoint_gate_passed": true,
+    "ranker_gate": {
+      "wrong_participants": 80,
+      "correct_participants": 1271
+    },
+    "status": "development_locked_before_test_or_external_predictions",
+    "classification_threshold": 0.34855958819389343,
+    "validation_labels_used": false,
+    "files_sha256": {
+      "cnn.pt": "833411c4fc1edb56e59687fa517bf574967851bf0cf08996ad86d2abfa5b852c",
+      "training_summary.json": "329542407fd1cc9fffa90aa1e7d8d54bc3b244618f9d5823129deb888403c431",
+      "policies.json": "4926622053d0c1cf5b684a57933dba43f50ea58060b761dadebc9045550fc7da",
+      "epoch_history.json": "55b0ca62e9baafd4c0cedcc27df631039b96ee1c53737c37f516a99a9e25ab86",
+      "quality_no_class.json": "653b918c9db92f30f2e742f380edbe41013446ce52ccbda2b4ef6eefdec39ac8",
+      "confidence_adjusted.json": "a71743cfc1db6515d3c6de1c44bbcac7f100329999e789fb734151f77d5b8d50",
+      "quality_only.json": "52b3149f915a1ffde29a8f76266f464ee505005de3d0bc4c8633cdf7c15cddee",
+      "combined.json": "e29a70dcfbae89decf213357e957bb9f0035df37a5a9e571a6957e00d1469733"
+    }
+  },
+  {
+    "seed": 20261101,
+    "best_epoch": 7,
+    "epochs_run": 15,
+    "training_seconds": 53.00131845999567,
+    "checkpoint": {
+      "AUROC": 0.9866582491582491,
+      "AUPRC": 0.8604633043661278,
+      "Brier": 0.017708919942378998,
+      "threshold": 0.20540183782577515,
+      "sensitivity": 0.9,
+      "specificity": 0.9810606060606061,
+      "balanced_accuracy": 0.940530303030303,
+      "TP": 81,
+      "FN": 9,
+      "TN": 1295,
+      "FP": 25
+    },
+    "checkpoint_gate_passed": true,
+    "ranker_gate": {
+      "wrong_participants": 75,
+      "correct_participants": 1274
+    },
+    "status": "development_locked_before_test_or_external_predictions",
+    "classification_threshold": 0.20540183782577515,
+    "validation_labels_used": false,
+    "files_sha256": {
+      "cnn.pt": "14a1c89023cf3175e2034fbc979703e3a2ec7d9054bd96ec48d24c81f71e95a0",
+      "training_summary.json": "1968a099440f7c41ab01943bd3751f6e115648013adf1d8c776a3c4e0160c766",
+      "policies.json": "5b6beda7b9b9730bc22eea929ded5f1d2b01f92b7ea008c3f908a6ca4a6fe6a8",
+      "epoch_history.json": "f0db3aa3889e23f03187c8b27b12e0a6ef0cd35479a4f5f26fe5184f0bdf6818",
+      "quality_no_class.json": "948ff21930df0f484ffd750c4a4cb9e2307ea479a13f9ba128ce14566cb16051",
+      "confidence_adjusted.json": "e1cf54d75eef2638be3d5c816ad79bbe83285d1ed770330f4c1049450ce9384a",
+      "quality_only.json": "64eddcb1e1c853b04b85e922acae90ae2b00c5ef318fa9e34bbb8e9c5a991492",
+      "combined.json": "069175859d22060e2d945a9dddaca397e8c9122cf98253c10818b35d6863e103"
+    }
+  }
+]

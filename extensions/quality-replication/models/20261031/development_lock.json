@@ -1,0 +1,37 @@
+{
+  "seed": 20261031,
+  "best_epoch": 6,
+  "epochs_run": 14,
+  "training_seconds": 52.16063324600691,
+  "checkpoint": {
+    "AUROC": 0.9897222222222222,
+    "AUPRC": 0.8544598404869009,
+    "Brier": 0.018543735146522522,
+    "threshold": 0.34855958819389343,
+    "sensitivity": 0.9,
+    "specificity": 0.9803030303030303,
+    "balanced_accuracy": 0.9401515151515152,
+    "TP": 81,
+    "FN": 9,
+    "TN": 1294,
+    "FP": 26
+  },
+  "checkpoint_gate_passed": true,
+  "ranker_gate": {
+    "wrong_participants": 80,
+    "correct_participants": 1271
+  },
+  "status": "development_locked_before_test_or_external_predictions",
+  "classification_threshold": 0.34855958819389343,
+  "validation_labels_used": false,
+  "files_sha256": {
+    "cnn.pt": "833411c4fc1edb56e59687fa517bf574967851bf0cf08996ad86d2abfa5b852c",
+    "training_summary.json": "329542407fd1cc9fffa90aa1e7d8d54bc3b244618f9d5823129deb888403c431",
+    "policies.json": "4926622053d0c1cf5b684a57933dba43f50ea58060b761dadebc9045550fc7da",
+    "epoch_history.json": "55b0ca62e9baafd4c0cedcc27df631039b96ee1c53737c37f516a99a9e25ab86",
+    "quality_no_class.json": "653b918c9db92f30f2e742f380edbe41013446ce52ccbda2b4ef6eefdec39ac8",
+    "confidence_adjusted.json": "a71743cfc1db6515d3c6de1c44bbcac7f100329999e789fb734151f77d5b8d50",
+    "quality_only.json": "52b3149f915a1ffde29a8f76266f464ee505005de3d0bc4c8633cdf7c15cddee",
+    "combined.json": "e29a70dcfbae89decf213357e957bb9f0035df37a5a9e571a6957e00d1469733"
+  }
+}

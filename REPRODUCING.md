@@ -59,3 +59,7 @@ The public adapter does not rerun the original cross-role waveform-identity audi
 The entire original training, external-source acquisition, feature-ablation and seed-sensitivity code is available for inspection. Rebuilding those historical stages requires reconstructing their omitted working artifacts and handling historical hash locks deliberately. They are not advertised as verified fresh-checkout entry points. This release's tested data-dependent adapter covers the fixed primary model on clean and four withheld-noise conditions; it does not reproduce the exploratory ablation or all external/seed analyses from raw data.
 
 Keep generated outputs separate from committed evidence. Do not change saved results to make a rerun pass. Inspect discrepancies, environment differences and provider input versions first.
+
+## Replication extension
+
+The separately documented [quality-without-class followup](extensions/quality-replication/README.md) includes fresh model weights, locked choices, aggregate results and audit code. Its data-dependent scripts require the full original local working package and are separate from the turnkey primary replay described above. The new external sample and development arrays are not distributed.

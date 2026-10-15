@@ -10,7 +10,7 @@ Can waveform quality help an ECG classifier decide which predictions to retain u
 
 The key distinction is between keeping most ECG records and keeping most AF cases. In the primary 24 dB condition at 90% matched overall coverage, the combined filter retained 1,877 of 2,085 ECGs, but only 14 of 151 AF-positive records. None of those 14 retained AF cases was correctly classified as AF.
 
-The primary combined-versus-confidence-ranker balanced retained-error difference was **−0.2635 percentage points** (95% paired participant-bootstrap CI **−2.7034 to +1.1410**). Qualified superiority was not established. The exploratory quality-without-predicted-class ablation is promising, but has not received fresh external or training-seed replication.
+The primary combined-versus-confidence-ranker balanced retained-error difference was **−0.2635 percentage points** (95% paired participant-bootstrap CI **−2.7034 to +1.1410**). Qualified superiority was not established. A [locked replication followup](extensions/quality-replication/README.md) now tests the quality-without-predicted-class ablation across two fresh training seeds and 930 new external records. Internal gains persisted and all five new comparisons met the AF-retention criterion, but one external interval crossed zero, so the complete replication requirement was not met.
 
 ## What is reproducible here?
 

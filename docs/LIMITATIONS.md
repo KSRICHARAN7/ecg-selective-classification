@@ -7,7 +7,7 @@
 - Retention concerns records, not unique participants. Overall coverage can conceal poor AF-case retention.
 - The combined filter did not meet the AF-retention requirement at any primary noise level at 90% coverage. Its primary interval includes zero; no qualified superiority is established.
 - The 80% AF-retention requirement is a study criterion, not a clinical safety standard.
-- Favorable quality-without-class results are exploratory. Fresh external and seed replication of that ablation remains undone.
+- Quality-without-class results remain exploratory. The new followup retained internal gains across two fresh seeds, but its full replication rule failed because one of three fresh-external model comparisons had an interval crossing zero. The external sample has only 37 AF-positive records and no reliable participant linkage.
 - Participant bootstrap uncertainty is conditional on the fixed fitted models and assigned noise library.
 - External followup has limited participant linkage and a fixed sample; it is not prospective or wearable validation.
 - Public evidence verification checks saved arithmetic and file integrity. It cannot prove that individual predictions or source annotations are correct.

@@ -1,0 +1,25 @@
+{
+  "sampled_headers": 1000,
+  "eligible_records": 930,
+  "AF_positive_records": 37,
+  "non_AF_records": 893,
+  "exclusion_reasons": {
+    "age_missing_or_under18": 46,
+    "no_explicit_eligible_rhythm_code": 23,
+    "unparseable_provider_date": 1
+  },
+  "all_provider_hashes_verified": true,
+  "exact_waveform_overlap": {
+    "original_external": 0,
+    "train": 0,
+    "checkpoint": 0,
+    "ranker": 0,
+    "validation": 0,
+    "internal_test": 0
+  },
+  "within_sample_duplicate_waveforms": 0,
+  "numerical_class_gate_passed": true,
+  "patient_linkage_unavailable": true,
+  "bootstrap_unit": "record",
+  "selection_sha256": "4af61670124176ab523cb99d84b40a574ba7f732a9869a4c30639eaa83d6387a"
+}
