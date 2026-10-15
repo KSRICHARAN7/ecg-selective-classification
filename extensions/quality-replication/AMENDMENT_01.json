@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-15T22:47:24.653560+00:00",
+  "stage": "after a malformed provider header was encountered during acquisition; before any new-seed internal or fresh-external prediction evaluation",
+  "reason": "WFDB rejected a provider record header with an invalid date field (time data slash does not match day/month/year). The date is not a predictor, but the locked decoder cannot establish eligibility for this record.",
+  "decision": "Keep the fixed1000-header selection. Mark provider headers with this specific invalid-date parse failure as ineligible: unparseable_provider_date. Do not repair source bytes, replace the sampled record, adjust sample size, or infer its AF label. Other source errors still stop acquisition.",
+  "unchanged": [
+    "candidate and comparators",
+    "new training seeds",
+    "sample seed and selected-path hash",
+    "noise conditions",
+    "coverage and AF-retention criterion",
+    "bootstrap and replication decision rule"
+  ],
+  "reporting": "Report parse-failure exclusion count separately, with all selected header hashes verified; no outcome-based replacement."
+}
