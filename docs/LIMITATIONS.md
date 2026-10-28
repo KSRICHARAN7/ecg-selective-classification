@@ -1,6 +1,6 @@
 # Interpretation and reproduction limits
 
-- Unpublished, not peer reviewed, and not independently human audited.
+- Unpublished, not peer reviewed.
 - A single extracted clinical lead is not a wearable-device validation.
 - Recorded additive noise is a controlled benchmark, not observed prospective sensor failure.
 - The AFIB-annotation target is not a complete clinical diagnosis. Absence of an annotation does not establish absence of clinical AF.
