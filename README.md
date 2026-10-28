@@ -53,8 +53,6 @@ The study cohort contains 15,292 adult human-reviewed PTB-XL ECG records from 13
 
 No wearable validation, prospective clinical trial or clinical safety guarantee is claimed. See [limitations](docs/LIMITATIONS.md) and [data attribution](docs/DATA_ACCESS.md).
 
-## Attribution and AI assistance
-
-The original study and this software/research communication release were developed with GPT/Codex assistance, including coding, debugging, analysis checks, and drafting/editing. The manuscript's disclosure remains in the linked draft. This repository does not claim independent human audit or unaided authorship.
+## Attribution 
 
 Software is available under [the MIT license](LICENSE). Provider datasets and the linked manuscript retain their own terms and are not relicensed by this repository. Trained weights are research artifacts derived from PTB-XL; dataset attribution is retained in `docs/DATA_ACCESS.md`.
